@@ -1,12 +1,14 @@
 function List({ recipes }) {
-    console.log(recipes)
     return (
         <>
             {recipes.map(recipe => (
-                <div className="card" key={recipe._id}>
-                    <p>{recipe.name}</p>
-                    <p>{recipe.cook_time}</p>
-                    <p>{recipe.ingredients}</p>
+                <div className="search-card" key={recipe._id}>
+                    <h1 className="search-title">{recipe.name}</h1>
+                    <p>Cook Time: {recipe.cook_time}</p>
+                    <div className="search-hover hidden">
+                        <p>Rating: {recipe.rating}</p>
+                        <p>Ingredients: {recipe.ingredients}</p>
+                    </div>
                 </div>
             ))}
         </>
