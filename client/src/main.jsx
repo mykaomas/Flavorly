@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
+import SearchList from './pages/SearchList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,10 @@ const router = createBrowserRouter([
       }, {
         path: '/matchup/:id',
         element: <Vote />
-      },
+      }, {
+        path: '/search',
+        element: <SearchList />
+      }
     ],
   },
 ]);

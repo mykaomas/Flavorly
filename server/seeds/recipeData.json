@@ -1,14 +1,16 @@
 [
   {
-    "ingredients": "ingredient list",
-    "cook_time": "20 mins",
+    "name": "Recipe 1",
+    "ingredients": "ingredient list for recipe 1",
+    "cook_time": "10 mins",
     "directions": "just cook it lmao",
     "difficulty": "gg ez"
   },
   {
-    "ingredients": "ingredient list",
+    "name": "Recipe 2",
+    "ingredients": "ingredient list for recipe 2",
     "cook_time": "20 mins",
-    "directions": "just cook it lmao",
-    "difficulty": "gg ez"
+    "directions": "just cook it lol",
+    "difficulty": "ez"
   }
 ]

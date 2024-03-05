@@ -6,13 +6,14 @@ const typeDefs = `
 
   type Recipe {
     _id: ID!
+    name: String!
     ingredients: String!
     cook_time: String!
   }
 
   type Query {
     users: [User]
-    recipes(_id: ID): [Recipe]
+    recipes: [Recipe]
   }
 
   type Mutation {
