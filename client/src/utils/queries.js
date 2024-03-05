@@ -28,6 +28,7 @@ export const QUERY_RECIPES = gql`
       ingredients
       cook_time
       name
+      rating
     }
   }
 `

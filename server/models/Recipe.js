@@ -22,6 +22,9 @@ const recipeSchema = new Schema({
     type: String,
     required: true
   },
+  rating: {
+    type: Number
+  },
   reviews: [reviewSchema]
 })
 

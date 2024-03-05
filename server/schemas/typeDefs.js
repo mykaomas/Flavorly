@@ -9,6 +9,7 @@ const typeDefs = `
     name: String!
     ingredients: String!
     cook_time: String!
+    rating: Int
   }
 
   type Query {
