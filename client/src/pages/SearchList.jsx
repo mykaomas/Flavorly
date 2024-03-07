@@ -12,7 +12,10 @@ function SearchList() {
       {loading ? (
         <div>Loading...</div>
         ) : (
-          <List recipes={recipes}/>
+          <div>
+            <button className="filter-btn">Filter</button>
+            <List recipes={recipes}/>
+          </div>
         )}
     </>
   )
