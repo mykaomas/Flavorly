@@ -5,9 +5,8 @@ const resolvers = {
     users: async () => {
       return User.find({})
     },
-    recipes: async (parent, { _id }) => {
-      const params = _id ? { _id } : {}
-      return Recipe.find(params);
+    recipes: async () => {
+      return Recipe.find();
     },
   },
   Mutation: {
