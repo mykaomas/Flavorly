@@ -1,26 +1,23 @@
 const typeDefs = `
-  type Tech {
+  type User {
     _id: ID!
     name: String!
   }
 
-  type Matchup {
+  type Recipe {
     _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    ingredients: String!
+    cook_time: String!
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    users: [User]
+    recipes(_id: ID): [Recipe]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    createRecipe(ingredients: String!, cook_time: String!): Recipe
   }
-`;
+`
 
-module.exports = typeDefs;
+module.exports = typeDefs

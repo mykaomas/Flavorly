@@ -1,29 +1,21 @@
-const { Tech, Matchup } = require('../models');
+const { User, Recipe } = require('../models')
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
+    users: async () => {
+      return User.find({})
     },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
+    recipes: async (parent, { _id }) => {
+      const params = _id ? { _id } : {}
+      return Recipe.find(params);
     },
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
-    },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
-  },
-};
+    createRecipe: async (parent, args) => {
+      const recipe = await Recipe.create(args)
+      return recipe
+    }
+  }
+}
 
-module.exports = resolvers;
+module.exports = resolvers
