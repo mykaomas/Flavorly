@@ -1,13 +1,14 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_TECH = gql`
-  query tech {
-    tech {
-      _id
-      name
-    }
-  }
-`;
+// export const QUERY_TECH = gql`
+//   query tech {
+//     tech {
+//       _id
+//       name
+//     }
+//   }
+// `;
+
 
 export const QUERY_MATCHUPS = gql`
   query matchups($_id: String) {
@@ -32,3 +33,4 @@ export const QUERY_RECIPES = gql`
     }
   }
 `
+
