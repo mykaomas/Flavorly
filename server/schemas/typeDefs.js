@@ -7,13 +7,15 @@ const typeDefs = `
 
   type Recipe {
     _id: ID!
+    name: String!
     ingredients: String!
     cook_time: String!
+    rating: Int
   }
 
   type Query {
     users: [User]
-    recipes(_id: ID): [Recipe]
+    recipes: [Recipe]
   }
 
   type Auth {
