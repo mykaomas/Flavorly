@@ -1,8 +1,9 @@
 const typeDefs = `
   type User {
-    _id: ID!
-    name: String!
-    email: String!
+    _id: ID
+    name: String
+    email: String
+    password: String!
   }
 
   type Recipe {
@@ -13,14 +14,14 @@ const typeDefs = `
     rating: Int
   }
 
-  type Query {
-    users: [User]
-    recipes: [Recipe]
-  }
-
   type Auth {
     token: ID!
     user: User
+  }
+
+  type Query {
+    users: [User]
+    recipes: [Recipe]
   }
 
   type Mutation {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from "../utils/mutations";
 
@@ -14,7 +14,7 @@ const Login = (props) => {
     const handleChange = (event) => {
       const { name, value } = event.target;
   
-      setFormState({
+      setUserState({
         ...userState,
         [name]: value,
       });
