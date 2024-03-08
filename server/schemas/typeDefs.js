@@ -10,6 +10,7 @@ const typeDefs = `
     ingredients: String!
     cook_time: Int!
     rating: Int
+    difficulty: Int
   }
 
   type Query {

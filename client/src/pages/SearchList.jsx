@@ -52,6 +52,12 @@ function SearchList() {
     }
     
     // Difficulty
+    const difficulty = document.querySelectorAll("input[name=difficulty]:checked")
+    if (difficulty.length > 1) {
+      alert("Please select only one difficulty")
+    } else if (difficulty.length === 1) {
+      recipes = recipes.filter(function (recipe) {return recipe.difficulty <= difficulty[0].value})
+    }
     
     // Rating
     const rating = document.querySelectorAll("input[name=rating]:checked")
@@ -91,9 +97,9 @@ function SearchList() {
                 <input type="checkbox" name="cookTime" value=">30"/>More Than 30 mins
 
                 <h5>Difficulty:</h5>
-                <input type="checkbox" name="difficulty" value="easy"/>Easy
-                <input type="checkbox" name="difficulty" value="medium"/>Medium
-                <input type="checkbox" name="difficulty" value="hard"/>Hard
+                <input type="checkbox" name="difficulty" value="1"/>Easy
+                <input type="checkbox" name="difficulty" value="2"/>Medium
+                <input type="checkbox" name="difficulty" value="3"/>Hard
 
                 <h5>Rating:</h5>
                 <p>Please Select One</p>

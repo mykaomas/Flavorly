@@ -29,6 +29,7 @@ export const QUERY_RECIPES = gql`
       cook_time
       name
       rating
+      difficulty
     }
   }
 `
