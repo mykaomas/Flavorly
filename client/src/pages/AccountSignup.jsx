@@ -1,81 +1,102 @@
-import React, { useState } from "react"
-import { link } from "react-router-dom"
-import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
-function accountSignup() {
+import { useMutation } from '@apollo/client';
 
-    const [ name, setName] = useState()
-    const [ email, setEmail ] = useState()
-    const [ password, setPassword] = useState()
-    const navigate = useNavigate()
+import { ADD_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+const Signup = () => {
+    const [userState, setUserState] = useState({
+      name: '',
+      email: '',
+      password: '',
+    });
+    const [addUser, { error, data }] = useMutation(ADD_USER);
+  
+    // update state based on form input changes
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...userState,
+        [name]: value,
+      });
+    };
+  
+    // submit form
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      console.log(userState);
+  
+      try {
+        const { data } = await addUser({
+          variables: { ...formState },
+        });
+  
+        Auth.login(data.addUser.token);
+      } catch (e) {
+        console.error(e);
+      }
+    };
 
-        axios.post("http://localhost:3001/register", { name, email, password } )
-        .then(result => {console.log(result)
-        navigate("/profile")
-    })
-    .catch(err => console.log(err))
-    }
+    return (
+        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+            <div className="bg-white p-3 rounded w-25">
+            <h2><center>Sign Up</center></h2>
+
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <label htmlFor="email">
+                            <strong>Name</strong>
+                        </label>
+                        <input type="text" 
+                        placeholder='Enter Name' 
+                        autoComplete='off' 
+                        name='email' 
+                        className='form-control rounded-0'
+                        value={ userState.name }
+                        onChange={ handleChange }
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="email">
+                            <strong>Email</strong>
+                        </label>
+                        <input type="text" 
+                        placeholder='Enter Email' 
+                        autoComplete='off' 
+                        name='email' 
+                        className='form-control rounded-0'
+                        value={ userState.email }
+                        onChange={ handleChange }
+
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="email">
+                            <strong>Password</strong>
+                        </label>
+                        <input type="password" 
+                        placeholder='Enter Password' 
+                        name='password' 
+                        className='form-control rounded-0'
+                        value = { userState.password } 
+                        onChange={ handleChange }
+
+                        />
+                    </div>
+                    <button 
+                    type="submit" 
+                    className="btn btn-success w-100 rounded-0"
+                    style={{ cursor: 'pointer' }}
+                    >
+                        Sign Up
+                    </button>
+                    </form>
+            </div>
+        </div>
+    );
 }
 
-return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-        <div className="bg-white p-3 rounded w-25">
-        <h2><center>Sign Up</center></h2>
 
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Name</strong>
-                    </label>
-                    <input type="text" 
-                    placeholder='Enter Name' 
-                    autoComplete='off' 
-                    name='email' 
-                    className='form-control rounded-0'
-                    onChange={(e) => setName(e.target.value)}
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Email</strong>
-                    </label>
-                    <input type="text" 
-                    placeholder='Enter Email' 
-                    autoComplete='off' 
-                    name='email' 
-                    className='form-control rounded-0' 
-                    onChange={(e) => setEmail(e.target.value)}
-
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Password</strong>
-                    </label>
-                    <input type="password" 
-                    placeholder='Enter Password' 
-                    name='password' 
-                    className='form-control rounded-0' 
-                    onChange={(e) => setPassword(e.target.value)}
-
-                    />
-                </div>
-                <button type="submit" className="btn btn-success w-100 rounded-0">
-                    Sign Up
-                </button>
-                </form>
-                <p>Already have an account?</p>
-                <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                    Login
-                </Link>
-            
-        </div>
-    </div>
-  );
-
-
-export default accountSignup;
+export default Signup;

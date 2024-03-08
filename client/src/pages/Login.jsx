@@ -1,30 +1,45 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios'
-import { useNavigate } from "react-router-dom";
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from "../utils/mutations";
 
-function Login() {    
+import Auth from '../utils/auth'
 
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
-    const navigate = useNavigate()
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post("http://localhost:3001/login", { email, password })
-        .then(result => {
-            console.log(result)
-            if(result.data === "Success"){
-                navigate("/profile")
-            }else{
-                navigate("/register")
-                alert("You are not registered to this service")
-
-            }
-       
-        })
-        .catch(err => console.log(err))
-    }
+const Login = (props) => {
+  console.log(props)
+    const [userState, setUserState] = useState({ email: '', password: '' });
+    const [login, { error, data }] = useMutation(LOGIN_USER);
+  
+    // update state based on form input changes
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...userState,
+        [name]: value,
+      });
+    };
+  
+    // submit form
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      console.log(userState);
+      try {
+        const { data } = await login({
+          variables: { ...userState },
+        });
+  
+        Auth.login(data.login.token);
+      } catch (e) {
+        console.error(e);
+      }
+  
+      // clear form values
+      setUserState({
+        email: '',
+        password: '',
+      });
+    };
 
     return (
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
@@ -40,8 +55,9 @@ function Login() {
                         placeholder='Enter Email' 
                         autoComplete='off' 
                         name='email' 
-                        className='form-control rounded-0' 
-                        onChange={(e) => setEmail(e.target.value)}
+                        // type="email"
+                        value={userState.email}
+                        onChange={handleChange}
     
                         />
                     </div>
@@ -52,8 +68,10 @@ function Login() {
                         <input type="password" 
                         placeholder='Enter Password' 
                         name='password' 
-                        className='form-control rounded-0' 
-                        onChange={(e) => setPassword(e.target.value)}
+                        // type='password'
+                        className='form-control rounded-0'
+                        value={userState.password} 
+                        onChange={handleChange}
     
                         />
                     </div>
@@ -61,11 +79,6 @@ function Login() {
                         Login
                     </button>
                     </form>
-                    <p>Don't have an account?</p>
-                    <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                        Sign Up
-                    </Link>
-                
             </div>
         </div>
       );
