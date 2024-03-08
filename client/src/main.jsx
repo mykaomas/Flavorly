@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
+import Profilepage from './pages/Profile'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       }, {
         path: '/matchup/:id',
         element: <Vote />
+      },
+      {
+        path: '/profile',
+        element: <Profilepage />
       },
     ],
   },
