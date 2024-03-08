@@ -6,6 +6,7 @@ import Signup from './pages/AccountSignup.jsx';
 import Login from './pages/Login.jsx';
 // import Profile from './pages/Vote';
 import NotFound from './pages/NotFound';
+import Profilepage from './pages/Profile'
 import SearchList from './pages/SearchList.jsx';
 
 const router = createBrowserRouter([
@@ -21,13 +22,12 @@ const router = createBrowserRouter([
 
         path: '/Login',
         element: <Login />
-      }, //{
-        path: '/matchup',
-        element: <Matchup />
-      }, {
-        path: '/matchup/:id',
-        element: <Vote />
-      }, {
+      },
+      {
+        path: '/Profile',
+        element: <Profilepage />
+      },
+       {
         path: '/search',
         element: <SearchList />
       }
