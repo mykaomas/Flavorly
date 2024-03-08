@@ -4,7 +4,7 @@ function Ingredients({ ingredients }) {
             {ingredients.map(ingredient => {
                 return (
                     <div className="ingredient" key={ingredients.indexOf(ingredient)}>
-                        <input type="checkbox" id={ingredient}/>{ingredient}
+                        <input type="checkbox" name="ingredient" value={ingredient}/>{ingredient}
                     </div>
                 )
             })}
