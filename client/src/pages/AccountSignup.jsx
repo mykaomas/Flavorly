@@ -17,7 +17,7 @@ const Signup = () => {
     const handleChange = (event) => {
       const { name, value } = event.target;
   
-      setFormState({
+      setUserState({
         ...userState,
         [name]: value,
       });
@@ -30,8 +30,9 @@ const Signup = () => {
   
       try {
         const { data } = await addUser({
-          variables: { ...formState },
+          variables: { ...userState },
         });
+        console.log(data)
   
         Auth.login(data.addUser.token);
       } catch (e) {
@@ -40,6 +41,7 @@ const Signup = () => {
     };
 
     return (
+      
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
             <div className="bg-white p-3 rounded w-25">
             <h2><center>Sign Up</center></h2>
@@ -49,10 +51,11 @@ const Signup = () => {
                         <label htmlFor="email">
                             <strong>Name</strong>
                         </label>
-                        <input type="text" 
+                        <input 
+                        type="text" 
                         placeholder='Enter Name' 
                         autoComplete='off' 
-                        name='email' 
+                        name='name' 
                         className='form-control rounded-0'
                         value={ userState.name }
                         onChange={ handleChange }
@@ -62,7 +65,8 @@ const Signup = () => {
                         <label htmlFor="email">
                             <strong>Email</strong>
                         </label>
-                        <input type="text" 
+                        <input 
+                        type="text" 
                         placeholder='Enter Email' 
                         autoComplete='off' 
                         name='email' 
@@ -76,7 +80,8 @@ const Signup = () => {
                         <label htmlFor="email">
                             <strong>Password</strong>
                         </label>
-                        <input type="password" 
+                        <input 
+                        type="password" 
                         placeholder='Enter Password' 
                         name='password' 
                         className='form-control rounded-0'
