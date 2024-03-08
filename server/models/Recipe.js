@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose')
 const reviewSchema = require('./Review')
 
 const recipeSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
   ingredients: {
     type: String,
     required: true,
@@ -17,6 +21,9 @@ const recipeSchema = new Schema({
   difficulty: {
     type: String,
     required: true
+  },
+  rating: {
+    type: Number
   },
   reviews: [reviewSchema]
 })
