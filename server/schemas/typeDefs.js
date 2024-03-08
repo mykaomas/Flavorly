@@ -9,8 +9,9 @@ const typeDefs = `
     _id: ID!
     name: String!
     ingredients: String!
-    cook_time: String!
+    cook_time: Int!
     rating: Int
+    difficulty: Int
   }
 
   type Query {

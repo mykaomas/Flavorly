@@ -1,4 +1,8 @@
-function List({ recipes }) {
+function List({ recipes, newRecipes }) {
+    if (newRecipes.length > 0) {
+        recipes = newRecipes
+    }
+    
     return (
         <>
             {recipes.map(recipe => {
