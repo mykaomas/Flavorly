@@ -34,14 +34,39 @@ function SearchList() {
   }
 
   const filterSearch = () => {
+    // Ingredients
     document.querySelectorAll("input[name=ingredient]:checked").forEach((ingredient) => {
       filterIngredients.push(ingredient.value)
       setFilterIngredients(filterIngredients)
     })
 
-    recipes = recipes.filter((recipe)=> filterIngredients.every(function (i) {return recipe.ingredients.includes(i)}))
+    recipes = recipes.filter((recipe) => filterIngredients.every(function (i) {return recipe.ingredients.includes(i)}))
+
+    // Cook Time
+    const cookTime = document.querySelectorAll("input[name=cookTime]:checked")
+
+    if (cookTime.length > 1) {
+      alert("Please select only one cook time")
+    } else if (cookTime.length === 1) {
+      recipes = recipes.filter(function (recipe) {return recipe.cook_time <= cookTime[0].value})
+    }
+    
+    // Difficulty
+    
+    // Rating
+    const rating = document.querySelectorAll("input[name=rating]:checked")
+    
+    if (rating.length > 1) {
+      alert("Please select only one rating")
+    } else if (rating.length === 1) {
+      recipes = recipes.filter(function (recipe) {return recipe.rating >= rating[0].value})
+    }
+    
     setNewRecipes(recipes)
-    console.log(newRecipes)
+
+    if (recipes.length === 0) {
+      alert("No recipes match that criteria")
+    }
 
     setFilterIngredients([])
   }
@@ -71,11 +96,12 @@ function SearchList() {
                 <input type="checkbox" name="difficulty" value="hard"/>Hard
 
                 <h5>Rating:</h5>
-                <input type="checkbox" name="rating" value="1"/>⭐
-                <input type="checkbox" name="rating" value="2"/>⭐⭐
-                <input type="checkbox" name="rating" value="3"/>⭐⭐⭐
-                <input type="checkbox" name="rating" value="4"/>⭐⭐⭐⭐
-                <input type="checkbox" name="rating" value="5"/>⭐⭐⭐⭐⭐
+                <p>Please Select One</p>
+                <input type="checkbox" name="rating" value={1}/>⭐
+                <input type="checkbox" name="rating" value={2}/>⭐⭐
+                <input type="checkbox" name="rating" value={3}/>⭐⭐⭐
+                <input type="checkbox" name="rating" value={4}/>⭐⭐⭐⭐
+                <input type="checkbox" name="rating" value={5}/>⭐⭐⭐⭐⭐
 
                 <button onClick={filterSearch}>See Results</button>
               </div>
