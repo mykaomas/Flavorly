@@ -7,6 +7,9 @@ import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import SearchList from './pages/SearchList.jsx';
+import './header.css'
+import './body.css'
+import './footer.css'
 
 const router = createBrowserRouter([
   {

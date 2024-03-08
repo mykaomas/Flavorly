@@ -1,0 +1,22 @@
+header {
+    background-color: tan;
+    display: flex;
+    justify-content: space-between;
+    text-align-last: center;
+    color: orangered;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+}
+nav a {
+        color: orangered;
+        text-decoration: none;
+        margin-left: 10px;
+        font-size: 20px;
+}
+
+
+
+
