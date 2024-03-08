@@ -51,7 +51,8 @@ const Login = (props) => {
                         <label htmlFor="email">
                             <strong>Email</strong>
                         </label>
-                        <input type="text" 
+                        <input 
+                        type="text" 
                         placeholder='Enter Email' 
                         autoComplete='off' 
                         name='email' 
