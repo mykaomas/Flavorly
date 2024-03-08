@@ -1,0 +1,30 @@
+#header {
+    background-color: #dcc1ae;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: "cursive";
+    border-bottom: solid;
+}
+#headerImage{
+    height: 73px;
+    float: left;
+    border-radius: 50%;
+    transition: all .5s ease-out;
+}
+#headerImage:hover{
+    transform: rotate(180deg) translateX(-50px);
+}
+
+#logoutbtn, #profilebtn {
+    float: right;
+    margin-right: 10%;
+    color:black;
+    font-size: larger;
+    transition: all .3s ease-out;
+    
+}
+#logoutbtn:hover, #profilebtn:hover{
+    transform: translateY(-50%);
+}
+
+

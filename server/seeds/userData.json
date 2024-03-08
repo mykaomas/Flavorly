@@ -1,11 +1,15 @@
 [
   {
     "name": "my name",
+    "email": "lalala@email.com",
+    "password": "test123",
     "expertise": "the OG",
     "bio": "im da best, duh"
   },
   {
-    "name": "another name",
+    "name": "my name",
+    "email": "lalala@email.com",
+    "password": "test123",
     "expertise": "the OG",
     "bio": "im da best, duh"
   }
