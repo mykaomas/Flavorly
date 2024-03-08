@@ -10,7 +10,7 @@ import Profilepage from './pages/Profile'
 import SearchList from './pages/SearchList.jsx';
 import './header.css'
 import './body.css'
-import './footer.css'
+
 
 const router = createBrowserRouter([
   {
