@@ -7,10 +7,6 @@ import Login from './pages/Login.jsx';
 // import Profile from './pages/Vote';
 import NotFound from './pages/NotFound';
 import Profilepage from './pages/Profile'
-import SearchList from './pages/SearchList.jsx';
-import './header.css'
-import './body.css'
-import './footer.css'
 
 const router = createBrowserRouter([
   {

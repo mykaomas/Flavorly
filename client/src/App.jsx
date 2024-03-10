@@ -1,13 +1,9 @@
-import Header from './header.jsx'
-import Footer from './Footer.sx'
-import Body from './Body.jsx'
+import React from "react";
 function App() {
 
   return (
     <>
-    <Header/>
-    <Body/>
-    <Footer/>
+    
     </>
 
   );
