@@ -1,4 +1,4 @@
-import Header from './header,jsx'
+import Header from './header.jsx'
 import Footer from './Footer.sx'
 import Body from './Body.jsx'
 function App() {
