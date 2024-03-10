@@ -1,26 +1,28 @@
 const typeDefs = `
   type User {
-    _id: ID!
-    name: String!
-    email: String!
+    _id: ID
+    name: String
+    email: String
+    password: String!
   }
 
   type Recipe {
     _id: ID!
     name: String!
     ingredients: String!
-    cook_time: String!
+    cook_time: Int!
     rating: Int
-  }
-
-  type Query {
-    users: [User]
-    recipes: [Recipe]
+    difficulty: Int
   }
 
   type Auth {
     token: ID!
     user: User
+  }
+
+  type Query {
+    users: [User]
+    recipes: [Recipe]
   }
 
   type Mutation {

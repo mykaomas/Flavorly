@@ -2,17 +2,17 @@
   {
     "name": "Recipe 1",
     "ingredients": "ingredient list for recipe 1",
-    "cook_time": "10 mins",
+    "cook_time": 10,
     "directions": "just cook it lmao",
-    "difficulty": "gg ez",
+    "difficulty": 3,
     "rating": 4
   },
   {
     "name": "Recipe 2",
     "ingredients": "ingredient list for recipe 2",
-    "cook_time": "20 mins",
+    "cook_time": 20,
     "directions": "just cook it lol",
-    "difficulty": "ez",
+    "difficulty": 1,
     "rating": 2
   }
 ]
