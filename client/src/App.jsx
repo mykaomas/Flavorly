@@ -1,19 +1,14 @@
-import './App.css';
-import { Outlet } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import Recipes from './pages/recipes';
+import './components/Recipes/css/Recipes.css'
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <div>
-        <Outlet />
-      </div>
-    </ApolloProvider>
+   <div>
+     
+     <Recipes/>
+     
+    </div>
   );
 }
 

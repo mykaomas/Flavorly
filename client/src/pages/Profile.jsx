@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import '../components/header/css/Header.css'
-import Header from "../components/header/header"
+import Header from '../components/header/Header'
 import '../pagescss/profile.css'
 
 
@@ -9,7 +9,7 @@ class Profilepage extends Component {
     render() {
         return (
             <div>
-                <Header ></Header>
+                <Header />
                     <div id= "searchbar">
                     <form>
                         <label>
