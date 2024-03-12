@@ -8,7 +8,7 @@ body {
 }
 
 .search-btn {
-    border: none;
+    border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .5rem 1rem;
     border-radius: 5px;
@@ -19,7 +19,7 @@ body {
 }
 
 .filter-btn {
-    border: none;
+    border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .5rem 1rem;
     border-radius: 5px;
