@@ -82,7 +82,7 @@ function SearchList() {
   return (
     <>
       <Header />
-      <SearchBar />
+      <SearchBar recipes={recipes}/>
       
       {loading ? (
         <div>Loading...</div>
