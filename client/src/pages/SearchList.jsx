@@ -92,7 +92,7 @@ function SearchList() {
     <>
       <div id="searchbar">
         <input id="search-input" type="text" onChange={(e) => setSearchInput(e.target.value)}/>
-        <button onClick={filterSearch}>Search</button>
+        <button className="search-btn" onClick={filterSearch}>Search</button>
       </div>
       
       {loading ? (

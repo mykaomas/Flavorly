@@ -15,7 +15,7 @@ function List({ recipes, newRecipes }) {
                 <div className="search-card" key={recipe._id}>
                     <h1 className="search-title">{recipe.name}</h1>
                     <div className="search-content">
-                        <p>Cook Time: {recipe.cook_time}</p>
+                        <p>Cook Time: {recipe.cook_time} mins</p>
                         <p>Rating: {rating}</p>
                         <p>Ingredients: {recipe.ingredients}</p>
                     </div>
