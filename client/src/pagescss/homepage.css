@@ -1,0 +1,35 @@
+.homepage-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .background-image {
+    background-image: url('./images/louis-hansel-nkMC3klUIhU-unsplash.jpg');
+    background-size: cover;
+  }
+  
+  .website-name {
+    color: #a4311f;
+  }
+  
+  .search-bar-wrapper {
+    margin-top: 50px;
+  }
+  
+  .auth-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .auth-link {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .auth-link:hover {
+    text-decoration: underline;
+  }

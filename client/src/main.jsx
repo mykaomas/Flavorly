@@ -8,6 +8,7 @@ import Login from './pages/Login.jsx';
 import NotFound from './pages/NotFound';
 import Profilepage from './pages/Profile'
 import SearchList from './pages/SearchList.jsx';
+import Homepage from './pages/Homepage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        path: '/Signup',
         element: <Signup />
       }, {
 
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
        {
         path: '/search',
         element: <SearchList />
+      }, {
+
+        path: '/Homepage',
+        element: <Homepage />
       }
     ],
   },
