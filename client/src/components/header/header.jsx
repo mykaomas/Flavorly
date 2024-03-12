@@ -10,7 +10,9 @@ const Header = () => {
     return (
         <div id = "header">
             <Link to='/'>
-            <img id = "headerImage" src="https://st5.depositphotos.com/6489488/68184/v/1600/depositphotos_681849440-stock-illustration-cute-cartoon-panda-eating-soup.jpg"></img>
+                <div className='animation'>
+                    <img id = "headerImage" src="https://st5.depositphotos.com/6489488/68184/v/1600/depositphotos_681849440-stock-illustration-cute-cartoon-panda-eating-soup.jpg"></img>
+                </div>
             </Link>
             <Link to='/' id='header-title'>Flavorly</Link>
             <div>
