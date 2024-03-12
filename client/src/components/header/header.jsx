@@ -9,8 +9,10 @@ const Header = () => {
     
     return (
         <div id = "header">
+            <Link to='/'>
             <img id = "headerImage" src="https://st5.depositphotos.com/6489488/68184/v/1600/depositphotos_681849440-stock-illustration-cute-cartoon-panda-eating-soup.jpg"></img>
-            <h1>Flavorly</h1>
+            </Link>
+            <Link to='/' id='header-title'>Flavorly</Link>
             <div>
                 {Auth.loggedIn() ? (
                     <>
