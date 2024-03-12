@@ -3,7 +3,8 @@ import { useState } from "react"
 import { useMutation } from '@apollo/client';
 
 import { ADD_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import Auth from '../utils/auth'
+import Header from "../components/header/header"
 
 const Signup = () => {
     const [userState, setUserState] = useState({
@@ -37,12 +38,16 @@ const Signup = () => {
         Auth.login(data.addUser.token);
       } catch (e) {
         console.error(e);
+        alert("User Already Registered, Please Login.")
       }
     };
 
+
+    <header></header>
     return (
-      
+    
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+          <Header></Header>
             <div className="bg-white p-3 rounded w-25">
             <h2><center>Sign Up</center></h2>
 
