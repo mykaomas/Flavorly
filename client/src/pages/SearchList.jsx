@@ -1,6 +1,6 @@
 import List from "../components/List"
 import Ingredients from "../components/Ingredients"
-import Header from "../components/header/header"
+import '../pagescss/recipes.css';
 
 import { useState } from "react"
 import { useQuery } from "@apollo/client"
@@ -90,7 +90,6 @@ function SearchList() {
 
   return (
     <>
-      <Header />
       <div id="searchbar">
         <input id="search-input" type="text" onChange={(e) => setSearchInput(e.target.value)}/>
         <button onClick={filterSearch}>Search</button>
