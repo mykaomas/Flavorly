@@ -4,7 +4,7 @@ function List({ recipes, newRecipes }) {
     }
     
     return (
-        <>
+        <div className="search-list">
             {recipes.map(recipe => {
                 let rating = ""
                 for (let i = 0; i < recipe.rating; i++) {
@@ -14,14 +14,14 @@ function List({ recipes, newRecipes }) {
                 return (
                 <div className="search-card" key={recipe._id}>
                     <h1 className="search-title">{recipe.name}</h1>
-                    <p>Cook Time: {recipe.cook_time}</p>
-                    <div className="search-hover hidden">
+                    <div className="search-content">
+                        <p>Cook Time: {recipe.cook_time} mins</p>
                         <p>Rating: {rating}</p>
                         <p>Ingredients: {recipe.ingredients}</p>
                     </div>
                 </div>
             )})}
-        </>
+        </div>
     )
 }
 
