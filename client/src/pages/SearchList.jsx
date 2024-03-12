@@ -1,5 +1,7 @@
 import List from "../components/List"
 import Ingredients from "../components/Ingredients"
+import Header from "../components/header/header"
+import SearchBar from "../components/searchbar/SearchBar"
 
 import { useState } from "react"
 import { useQuery } from "@apollo/client"
@@ -79,6 +81,9 @@ function SearchList() {
 
   return (
     <>
+      <Header />
+      <SearchBar />
+      
       {loading ? (
         <div>Loading...</div>
         ) : (
