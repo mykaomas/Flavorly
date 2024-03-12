@@ -1,18 +1,122 @@
 [
   {
-    "name": "Recipe 1",
-    "ingredients": "ingredient list for recipe 1",
-    "cook_time": 10,
-    "directions": "just cook it lmao",
+    "name": "Cosmic Brownies",
+    "ingredients": "butter cocoa-powder vegetable-oil chocolate sugar brown-sugar egg vanilla flour baking-powder salt",
+    "cook_time": 30,
+    "directions": "In a small saucepan, melt the butter over medium heat until just melted, swirling the pan as needed to avoid browning, 2 1/2 to 3 minutes. Remove from the heat. Add the cocoa powder and oil to the hot butter and whisk to fully incorporate and bloom the cocoa. Add the chopped bittersweet chocolate and whisk until fully melted and combined. Set aside to cool slightly while you whisk the egg mixture. In a large bowl, vigorously whisk the granulated sugar, light brown sugar, eggs, and vanilla until lightened in color and well combined, about 2 minutes. Scrape the chocolate mixture into the bowl with the egg mixture and whisk to combine. In a small bowl, whisk the flour, baking powder, and salt to combine. Add the flour mixture to the chocolate mixture and whisk until just combined. It’s okay if there are some flour streaks. Use a rubber spatula to give the batter a few good folds, taking care to scrape the bottom of the bowl to get all the dry ingredients, until all the flour is incorporated. The brownie batter will be on the thicker side. Scrape the batter into the prepared pan and spread into an even layer using the spatula, a small offset spatula, or the back of a spoon. Bake the brownies on the middle rack of the oven the top has a paper-thin crinkly appearance, and a toothpick comes out clean or with moist crumbs (not wet batter), 25 to 28 minutes. The brownies will likely puff around the 25-minute mark with a toothpick still coming out wet, then settle in the next couple minutes. Once the brownies settle, they are typically ready. Cool the brownies completely in their pan set over a wire rack, about 1 hour.",
+    "difficulty": 1,
+    "rating": 5
+  },
+  {
+    "name": "Blueberry Muffin Cookies",
+    "ingredients": "butter sugar egg vanilla flour milk salt baking-powder baking-soda blueberries blueberry-jam",
+    "cook_time": 15,
+    "directions": "Preheat your oven to 350°F and line a cookie sheet with parchment paper. Set aside. In a stand mixer fit the paddle attachment, beat the butter and granulated sugar together until light and airy, about 2 minutes. Use a rubber spatula to scrape down the sides of the bowl and add the egg and vanilla extract. Beat until smooth and fluffy, about 2 minutes. Add the flour, baking powder, baking soda and salt. Mix on low speed, gradually increasing to high. Mix until no streaks of flour remain. Add the milk and mix until combined. Do not over mix. Gently fold in the blueberries. Drop the jam into your dough and fold the dough a few times to distribute the jam. Do not fold it too many times-you want big ribbons of jam! In a separate bowl, combine all the ingredients for the streusel topping and use a fork to mixture until crumbly and clumping together. Use a 1.5 ounce cookie scoop to scoop out the dough onto your prepared baking sheet. Top with a heaping spoonful of the streusel topping, really pressing it into the dough. Bake the cookies for 12 to 15 minutes or until the edges are set, but the centers are still a little doughy. Allow to cool completely before eating!",
     "difficulty": 3,
+    "rating": 3
+  },
+  {
+    "name": "Fluffy Blueberry Pancakes",
+    "ingredients": "egg buttermilk butter vanilla salt baking-powder baking-soda flour sugar blueberries",
+    "cook_time": 5,
+    "directions": "In a large bowl, stir together the flour, sugar, baking powder, baking soda, and salt. In a separate bowl whisk together the eggs, melted butter, vanilla extract and buttermilk. Add the wet ingredients to the dry ingredients, stirring only until just combined. The batter should be lumpy. Last, fold in the blueberries. Heat a large skillet or griddle on medium heat. Once griddle is hot, liberally grease with oil or butter (about 1 tablespoon per 3 pancakes). Pour ¼ cup of batter per pancake onto surface. Cook on one side until holes form around edges, about 2 minutes, then flip and cook on other side for additional 1-2 minutes. Don’t let the pan get too hot– you want a nice, even heat.",
+    "difficulty": 2,
+    "rating": 1
+  },
+  {
+    "name": "Classic Belgian Waffles",
+    "ingredients": "egg sugar butter milk vanilla flour baking-powder salt",
+    "cook_time": 3,
+    "directions": "Plug in your waffle iron to preheat according to the manufacturer’s instructions. Seperate your eggs, being careful not to get any yolks into the egg whites. Place the egg yolks in a large bowl and set aside. Place the egg whites into the bowl of a stand mixer with the whisk attachment and beat on high until the egg whites form stiff peaks. Set aside. In a large bowl mix together the egg yolks, sugar, and melted Vermont Creamery Cultured Butter with a whisk. Whisk until smooth. Next, add the milk and the vanilla extract and mix well. Add the flour, baking powder, and salt and stir until combined, but still lumpy. Do not overmix. Last, add the whipped egg whites to the batter and use a rubber spatula to gently fold to combine. Fold until no streaks of egg whites remain, but do not over mix. Spray the waffle iron with nonstick spray and spoon in the amount of batter recommended by the manufacturer (it was about 1 cup for our machine).",
+    "difficulty": 2,
+    "rating": 2
+  },
+  {
+    "name": "Almond Croissants",
+    "ingredients": "water sugar almond-extract croissants butter egg almond-meal sugar almond-extract vanilla salt almonds",
+    "cook_time": 15,
+    "directions": "Preheat the oven to 375°F and line 2 baking sheets with parchment paper. Set aside. Slice your stale croissants in half lengthwise and place on the baking sheets with the cut sides up In a microwave safe bowl combine the water and sugar and microwave for 1 minute, stirring the mixture well until the sugar crystals have completely dissolved. If they haven’t dissolved yet, place back in the microwave for 30 seconds. Stir in the almond extract. Set aside. In a medium bowl combine the butter, egg, almond meal, granulated sugar, almond extract, vanilla extract and salt. Beat together until smooth. Use a pastry brush to generously coat the cut sides of the croissants. Spread about 1 Tablespoon of the almond filling on the bottom halves of each croissant and place the top halves on top to sandwich the croissants back together. Brush the tops of the croissants with simples syrup and then top each croissant with another heaping Tablespoon of the almond filling, using a spoon or butter knife to spread over the top. Top each croissant with sliced almonds, pressing the almonds into the topping to make sure they stick. Bake for 12 to 15 minutes into the preheated oven or until golden brown.",
+    "difficulty": 2,
+    "rating": 1
+  },
+  {
+    "name": "Chicken Scarpariello",
+    "ingredients": "chicken-thigh salt ground-black-pepper olive-oil sausages sweet-onion red-bell-peppers garlic rosemary chicken-broth dry-white-wine pickled-pepper-brine pickled-pepper gold-potatoes",
+    "cook_time": 70,
+    "directions": "Season the chicken thighs all over with the salt and pepper. Heat the olive oil in a 4 to 6-quart braiser or Dutch oven over medium heat. When the oil is shimmering, add the chicken thighs skin side down. Allow them to sear until the chicken skin releases easily from the pan and has become crispy and golden brown, 6 to 8 minutes. Using tongs, flip the chicken thighs and cook them for 3 more minutes. Transfer them to a plate. Add the sausages to the pot and sear them for about 1 minute, until they are nicely browned. Flip the sausages and sear for 1 more minute, then transfer to the plate with the chicken thighs. Add the onion, bell peppers, garlic, and rosemary to the pot and cook until the onions are beginning to soften and become translucent, about 5 minutes. Add the chicken broth, white wine, and pepper brine and stir, using a wooden spoon to nudge up any browned bits from the bottom of the pan. Bring the liquid up to a simmer, then cook for about 5 minutes, allowing some of the liquid to evaporate. Add the chicken thighs skin side-up and sausages back to the pot, nestling them in amongst the vegetables. Nestle the pickled peppers and potatoes around the chicken thighs and sausages and spoon some of the cooking liquid over the potatoes. It’s okay if everything isn’t covered by liquid. Cover the pot, then transfer it to the oven. Let cook for about 45 minutes, until the chicken and potatoes are tender and cooked through. Taste the sauce and season with more salt and black pepper if needed. Place a chicken thigh, sausage, and some vegetables onto each serving plate. Spoon over some of the cooking liquid. Serve with crusty bread or cooked pasta.",
+    "difficulty": 3,
+    "rating": 3
+  },
+  {
+    "name": "One-Pot Taco Pasta",
+    "ingredients": "olive-oil white-onion red-bell-pepper ground-beef taco-seasoning paprika ground-cumin diced-tomatoes green-chilis elbow-pasta beef-broth cheddar-cheese cilantro lime-juice",
+    "cook_time": 30,
+    "directions": "Set a large pot (5 or 6 quarts) on the stove over medium-high heat. Add the olive oil. Once shimmering, add the chopped onion and bell pepper and cook until just softened, about 2 minutes. Add the ground beef and use a wooden spoon to break it up in the pan. Reduce the heat to medium and cook until most of the pink is gone, 3 to 5 minutes. If desired, spoon off some of the grease. For plant-based meat, this will only take 2 to 3 minutes. Add the taco seasoning, paprika, cumin, canned tomatoes, and green chilis, both undrained. Mix until combined. Add the dry pasta and stir to coat. Pour in the beef broth and mix everything once more. Increase the heat to medium-high and bring the mixture to a boil (this takes 3 to 5 minutes). Once boiling, reduce the heat to low, cover the pot with a lid, and simmer until the pasta is cooked, 13 to 15 minutes. Stir a few times while simmering to ensure the pasta cooks evenly. Turn off the heat and stir in the shredded cheddar cheese until it melts. Mix in chopped cilantro, lime juice, and hot sauce (if using). Taste and add salt as needed. Let it sit for 3 to 5 minutes to thicken before serving topped with scallions, sour cream, and lime, if desired.",
+    "difficulty": 1,
+    "rating": 3
+  },
+  {
+    "name": "Taco Salad",
+    "ingredients": "ground-beef olive-oil taco-seasoning water romaine-lettuce shredded-cheese green-onion tomatoes black-olived tostadas sour-cream salsa lime",
+    "cook_time": 20,
+    "directions": "Place a medium skillet over medium-high heat. Add olive oil then beef into the pan. As the meat browns, intermittently use a spatula or wooden spoon to break it up but do not constantly do so or it will be too fine (uneven sizes will help the taco seasoning to adhere better). While the meat is browning, take the time to prep all the remaining ingredients. Part of the joy of this taco salad isn’t just the taste–it’s the fact that it can get to the table in 30 minutes, start to finish–and using this time wisely means that when the meat is cooked, you’ll be ready to assemble. Once the ground beef has fully browned, turn the heat to medium and sprinkle the taco seasoning over it. Stir to coat meat, and then pour the water in the pan, stirring again to make sure there are no dry spots or clumps of seasoning. Then allow the meat to simmer and the sauce to reduce, stirring occasionally, until the meat is just damp but not soggy, about 5-8 minutes. Remove beef from the heat and set aside but keep warm. Do not drain. For each serving, layer as follows: 1 crushed tostada, 1 cup loosely packed lettuce, 1/2 cup meat, 1/4 cup shredded cheese, 1/3 cup tomatoes, sprinkle of chopped green onion, 2 tablespoons olives, and 1 more lightly crushed tostada. Garnish with 1 tablespoon sour cream and 2 tablespoons salsa. Serve with lime wedges on the side for squeezing.",
+    "difficulty": 2,
+    "rating": 5
+  },
+  {
+    "name": "Pickle Pizza",
+    "ingredients": "sour-cream mayonnaise dried-dill pickle-juice garlic-powder salt ground-black-pepper pizza-dough flour cornmeal garlic-dill-sauce dill-pickle-slices mozzarella-cheese parmesan-cheese",
+    "cook_time": 45,
+    "directions": "In a medium bowl, whisk together the sour cream, mayonnaise, dried dill, dill pickle juice, garlic powder, salt, and pepper. Taste and adjust seasonings as needed. Take one ball of dough and flatten it with your hands on a lightly floured work surface. Starting at the center and working outwards, use your fingertips to press the dough into a 12 to 14-inch circle. You can also hold up the edges of the dough with your fingers, letting it hang and stretch, while working around the edges. Repeat with the second ball of dough. Lightly sprinkle a pizza peel or rimless baking sheet with cornmeal. Transfer one prepared dough round to the peel. Spoon on half the sauce (about 1/4 cup plus 2 tablespoons) and spread it in an even layer using the back of a spoon, leaving 1/2-inch from the edge bare. Arrange 1/2 cup pickles over the sauce, followed by 1 cup mozzarella cheese and 1/4 cup Parmesan cheese. Top with 1/2 cup pickles and 1/2 teaspoon dried dill. Carefully sprinkle some cornmeal onto the preheated baking sheet or stone. Slide the pizza onto the sheet (it’s okay if it’s hanging over the edges slightly) and bake for 11 to 13 minutes, until the crust is golden brown and the cheese is bubbling. Use a pizza peel to remove the pizza from the oven and transfer it to a cooling rack.",
+    "difficulty": 1,
+    "rating": 1
+  },
+  {
+    "name": "Vegan Chicken Nuggets",
+    "ingredients": "tofu vegetable-oil salt paprika garlic-powder onion-powder italian-seasoning ground-black-pepper milk dijon-mustard white-vinegar flour yeast cayenne-pepper",
+    "cook_time": 10,
+    "directions": "Blot the tofu dry with paper towels, then use your hands to break it into quarters. Split each quarter in half (revealing the center of the block), then tear in half the other way, creating 16 evenly-sized pieces. Place the tofu pieces in a single layer on a small parchment-lined baking sheet or dinner plate (whatever will fit in your freezer). Freeze until frozen solid, at least 4 hours. Transfer the tofu pieces to the refrigerator to thaw overnight. If they’re still frozen when you’re ready to start cooking, defrost them in the microwave at 50 percent power, flipping every minute. Set aside the parchment-lined baking sheet. Sandwich the tofu between several layers of paper towels and press with your hands to release any excess moisture. Continue this process until very little moisture transfers to the towels. Place the salt, paprika, garlic powder, onion powder, Italian seasoning, and black pepper in a medium bowl. Whisk with a fork to combine and set aside. Whisk together the soy milk, Dijon mustard, vinegar, and 1 tablespoon of the spice blend in a medium bowl. Add the thawed tofu to the marinade, tossing to coat. Using the back of a spoon, press down on the pieces until mostly submerged. Let sit at room temperature, stirring halfway, for at least for 30 minutes or up to 1 hour. While the nuggets are marinating, whisk the flour, nutritional yeast, and cayenne pepper (if using) into the bowl with the remaining spice blend. Stir in 1 tablespoon of the marinade to create small clumps throughout the mixture. Remove the nuggets from the marinade, giving them one final dunk and then letting any excess drip off. Dip them, one at a time, in the flour mixture until all sides are coated. Shake off any excess, then place on the reserved baking sheet. Pour enough oil into a large, heavy-bottomed skillet so that it comes up the sides at least 1/2 inch. Heat over medium-high until shimmering and a pinch of flour sizzles when you drop it into the pan. Use tongs to carefully transfer half of the nuggets to the oil in a single layer. Cook, flipping the tofu halfway through and turning onto its side if needed, until all 4 sides are crispy and golden-brown, 4 to 6 minutes total. Reduce the heat if the oil gets too hot. Repeat with the remaining nuggets, adding oil to the pan and letting it come back up to temperature between batches (if needed). Drain on paper towels and sprinkle with salt, if desired. Serve immediately. Vegan chicken nuggets are best served warm, but leftovers can be refrigerated in an airtight container for up to 4 days. Reheat in a 400°F oven (or air fryer) for 5 minutes.",
+    "difficulty": 3,
+    "rating": 1
+  },
+  {
+    "name": "Stove Burger",
+    "ingredients": "salt black-pepper garlic-powder mayonnaise dijon-mustard ketchup ground-chuck brioche-buns american-cheese lettuce red-onion tomatoes",
+    "cook_time": 10,
+    "directions": "Before you start cooking, prepare the seasoning mix. In a small bowl, mix together the salt, pepper, and garlic powder. Set aside. In another small bowl, mix the mayonnaise, mustard, and ketchup together until smooth. Set aside. Loosely divide the ground beef into three 1/3-pound patties. Shape into discs about 1/2 inch thick and put a divot in the center of each patty to prevent swelling in the center. Season the patties with 1/2 teaspoon of seasoning mix per side of the patty, if using. Spray your skillet with a little non-stick spray and place burgers in the skillet. Press down on each patty with a spatula for 10 seconds. This is to encourage browning. Cook the burgers over medium heat for 4 minutes. Don’t touch them too much so you get a nice crust on the first side. Use a sturdy metal spatula to flip the burgers, being sure to scrape up any caramelization with the burger. After you flip the burgers, add the cheese, if using, and continue to cook for 3 minutes until the burger is cooked to desired doneness, usually medium. If you are only cooking one burger, you can toast your buns in the same skillet as your patty, or you can toast them separately if you are cooking multiple burgers at once. If you want the cheese to be very melted, cover the burgers with a lid for the last minute of cooking. Build your burgers by spreading some burger sauce on each bun. Put the burgers on the bottom bun and top with the lettuce, onions, tomatoes, and the top bun. Serve immediately with a cold drink.",
+    "difficulty": 2,
     "rating": 4
   },
   {
-    "name": "Recipe 2",
-    "ingredients": "ingredient list for recipe 2",
-    "cook_time": 20,
-    "directions": "just cook it lol",
+    "name": "Grilled Cheese Sandwiches",
+    "ingredients": "butter goat-cheese bread white-cheddar-cheese provolone-cheese swiss-cheese",
+    "cook_time": 15,
+    "directions": "Preheat the oven to 425°F with a rack in the upper third of the oven. Place the butter on a rimmed baking sheet and place in the preheated oven until the butter melts, about 5 minutes. Spread goat cheese evenly on 5 of the bread slices. Carefully tilt the pan so the melted butter coats the bottom. Arrange all of the bread slices in a single layer in the melted butter on the baking sheet. Ensure the goat cheese is facing up. Place 1 cheddar slice on each bread slice with goat cheese and place 1 slice each of provolone and 1 slice of Swiss on each plain bread slice. Return to the oven and bake at 425°F until the cheese is bubbly and the bread is beginning to brown, about 7 minutes. Remove from the oven and assemble the sandwiches by combining each of the goat cheese slices with the provolone and Swiss slices. Return to oven and bake until bread is golden and toasted, 3 to 4 minutes.",
     "difficulty": 1,
-    "rating": 2
+    "rating": 5
+  },
+  {
+    "name": "Chicken Caesar Wrap",
+    "ingredients": "chicken romaine-lettuce caesar-dressing parmesan-cheese croutons salt black-pepper tortillas",
+    "cook_time": 20,
+    "directions": "In a large bowl, add the chicken, lettuce, Caesar dressing, Parmesan cheese, and croutons. Toss until everything is evenly coated in the dressing. Taste and season with salt and black pepper, if needed. Place a tortilla flat on a cutting board or clean work surface. Add a quarter of the salad in the center of the tortilla. Fold the left and right edges in towards the center, then tuck the side closest to you up and roll it tightly. Secure it with a toothpick, if you’d like. You could also keep the wrap seam side-down so that it doesn’t unroll. Assemble the remaining 3 wraps just like this. Cut the wraps in half or serve them whole. The chicken Caesar wraps can be wrapped in plastic wrap, parchment paper, or foil, and refrigerated for up to 2 days.",
+    "difficulty": 1,
+    "rating": 4
+  },
+  {
+    "name": "Pepperoni Rolls",
+    "ingredients": "water yeast flour salt butter honey buttermilk egg pepperoni",
+    "cook_time": 40,
+    "directions": "In a small bowl, place 1/4 cup warm water and sprinkle the yeast over it. Let it sit until dissolved and creamy, about 5 minutes. Meanwhile, in a large mixing bowl, combine 3 cups (387g) flour and salt. In a small saucepan, melt 4 tablespoons butter over medium-low heat. Whisk in the honey and buttermilk, and heat just until warm to the touch (do not boil). Remove from heat and whisk in the egg. Add the water and yeast mixture to the flour, along with the buttermilk mixture. Mix with a wooden spoon until the dough just comes together. At first it will be quite sticky. If needed, add the remaining 1/2 cup (64g) flour, bit by bit. Resist the temptation to add a lot of flour; you want a soft dough that’s still kneadable. Transfer to a clean counter and gently knead by hand until smooth and supple, about 5 minutes. I don’t need to flour my counter—if the dough sticks, it needs more flour. Place the dough in a large, greased bowl, cover, and let rise on your counter until doubled in bulk, 1 to 2 hours. Position racks in the upper and lower thirds and line two baking sheets with parchment. Divide the dough into 12 equal pieces and let them rest on a lightly floured surface for 10 minutes. Melt the remaining 4 tablespoons of butter. Divide the pepperoni into 12 roughly equal piles. Take a piece of dough and pat it into a square roughly 4 to 5 inches across. Imperfection is totally acceptable here, and in fact slightly preferable. Shingle the pepperoni slices over the square, leaving a 1/4-inch border around the dough. Roll up the dough and firmly pinch the bottom seam to seal. Place it seam-side-down on the baking sheet. Repeat with the remaining dough. You’ll wind up with 6 rolls per sheet. Brush the rolls with half of the melted butter. Cover each baking sheet with a clean dish towel and let rise for 30 minutes. The rolls will not puff up visibly. Bake until lightly browned, 30 to 40 minutes, rotating the sheets from top to bottom and back to front halfway through baking. Immediately after removing from the oven, brush with the remaining butter—you may need to rewarm the butter slightly before brushing. Serve warm or at room temperature. Keep the cooled rolls at room temperature in a tightly sealed plastic bag or wrapped in plastic wrap for up to 3 days. To freeze the baked rolls, cool completely. Wrap each roll in plastic wrap, then in foil, and then pop the individually wrapped rolls in a zip top storage bag. Freeze for up to 1 month. Thaw on the counter and, for the best eating experience, warm in a microwave for 15 to 30 seconds before eating.",
+    "difficulty": 2,
+    "rating": 3
+  },
+  {
+    "name": "Grilled Oysters with Spicy Miso Butter",
+    "ingredients": "shelled-oysters butter white-miso-paste sirracha zested-lime baguette",
+    "cook_time": 7,
+    "directions": "If you’re using a gas grill, turn it to high, cover with the lid and let preheat for 10 minutes. If using a charcoal grill, light the coals and let them get hot. The grill is hot enough when you hold your hand an inch above the grill grates and can only leave it there for a few seconds. In a small bowl combine the butter, miso paste, and sriracha using a fork until well blended. Set aside until ready to use. Rinse the oysters under cold running water. Use a scrub brush or kitchen towel to slough off any dirt. Place the oysters on the hot grill, flat-side up, and cover with the lid. Cook until the oysters crack open. They won’t necessarily open wide like a clam, just look for a little crack. Occasionally an oyster refuses to open. Not to worry, it will be fully cooked, and you can wedge it open using an oyster knife. If you open the oyster and it smells “off” or unpleasant, toss it out. The time will vary depending on the heat of the grill and size of the oysters, 3 to 6 minutes. Use tongs to transfer the oysters to a platter, including any oysters that haven’t cracked open (they are fully cooked and are fine to eat unless they have an unpleasant smell). When the oysters are cool enough to handle, use an oyster or paring knife to pry the flat lid off each oyster and loosen it from the shell. Do your best not to spill the tasty oyster juices. You want each oyster tucked into the well of its shell. Discard the flat top shell. Any oysters that haven't opened should be fairly easy to wedge open. Hold each unopened oyster using a sturdy kitchen towel to protect your hand and insert an oyster knife in the narrow end of the shell. Wiggle until the shell lifts off. Spoon about 1/2 teaspoon of miso butter onto each oyster and set on the grill using tongs. Cover and grill until the butter bubbles, 30 to 60 seconds. Spread uncooked rice or a rock salt over a large platter to help stabilize the oysters. (If you want to.) Place the oysters on top and add a little lime zest over the top. Serve with the baguette, to be torn and dunked into the melted miso butter that lingers in the shells.",
+    "difficulty": 3,
+    "rating": 3
   }
 ]
