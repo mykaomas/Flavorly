@@ -1,5 +1,7 @@
 import List from "../components/List"
 import Ingredients from "../components/Ingredients"
+import Header from "../components/header/header"
+import SearchBar from "../components/searchbar/SearchBar"
 
 import { useState } from "react"
 import { useQuery } from "@apollo/client"
@@ -79,6 +81,9 @@ function SearchList() {
 
   return (
     <>
+      <Header />
+      <SearchBar />
+      
       {loading ? (
         <div>Loading...</div>
         ) : (
@@ -97,6 +102,7 @@ function SearchList() {
                 <input type="checkbox" name="cookTime" value=">30"/>More Than 30 mins
 
                 <h5>Difficulty:</h5>
+                <p>Please Select One</p>
                 <input type="checkbox" name="difficulty" value="1"/>Easy
                 <input type="checkbox" name="difficulty" value="2"/>Medium
                 <input type="checkbox" name="difficulty" value="3"/>Hard
