@@ -1,7 +1,6 @@
 import List from "../components/List"
 import Ingredients from "../components/Ingredients"
 import Header from "../components/header/header"
-import SearchBar from "../components/searchbar/SearchBar"
 
 import { useState } from "react"
 import { useQuery } from "@apollo/client"
@@ -14,6 +13,7 @@ function SearchList() {
   const [filterToggle, setFilterToggle] = useState(false)
   const [ingredients, setIngredients] = useState([])
   const [filterIngredients, setFilterIngredients] = useState([])
+  const [searchInput, setSearchInput] = useState('')
   
   const toggleFilter = () => {
     if (filterToggle) {
@@ -34,8 +34,17 @@ function SearchList() {
       }
     }
   }
-
+  
   const filterSearch = () => {
+    // Search
+    recipes = recipes.filter(function (recipe) {
+      if (searchInput === '') {
+        return recipe
+      } else if (recipe.name.toLowerCase().includes(searchInput.toLowerCase())) {
+        return recipe
+      }
+    })
+
     // Ingredients
     document.querySelectorAll("input[name=ingredient]:checked").forEach((ingredient) => {
       filterIngredients.push(ingredient.value)
@@ -82,7 +91,10 @@ function SearchList() {
   return (
     <>
       <Header />
-      <SearchBar recipes={recipes}/>
+      <div id="searchbar">
+        <input id="search-input" type="text" onChange={(e) => setSearchInput(e.target.value)}/>
+        <button onClick={filterSearch}>Search</button>
+      </div>
       
       {loading ? (
         <div>Loading...</div>
