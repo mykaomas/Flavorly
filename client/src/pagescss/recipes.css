@@ -37,13 +37,13 @@ body {
 .search-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin: 1rem;
 }
 
 .search-card {
-    flex: 0 0 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    max-width: 30%;
     border-radius: 10px;
     border: black solid 1px;
     display: flex;
