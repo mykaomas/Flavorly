@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "./Searchbar";
-import "../pagescss/homepage.css";
+import SearchBar from "./SearchBar"; 
+import "../pagescss/homepage.css"; 
+import Header from "../components/header/header"
 
 const Homepage = () => {
   return (
@@ -14,9 +15,8 @@ const Homepage = () => {
         </div>
       </header>
       <div className="background-image"></div>
-      <div className="search-bar-wrapper">
-        <SearchBar />
-      </div>
+      <p>Welcome to Flavorly, your ultimate destination for culinary inspiration! Explore a vast collection of delicious recipes, curated with care to satisfy every palate. Whether you're a seasoned chef or a novice cook, Flavorly offers something for everyone. From quick and easy weekday meals to elaborate gourmet dishes, embark on a culinary journey like no other. Start exploring now and let your taste buds guide you to new culinary adventures!</p>
+      <SearchBar />
     </div>
   );
 };

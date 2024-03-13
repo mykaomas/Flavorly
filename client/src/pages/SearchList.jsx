@@ -1,5 +1,6 @@
 import List from "../components/List"
 import Ingredients from "../components/Ingredients"
+import '../pagescss/recipes.css';
 
 import { useState } from "react"
 import { useQuery } from "@apollo/client"
@@ -7,11 +8,13 @@ import { QUERY_RECIPES } from "../utils/queries"
 
 function SearchList() {
   const { loading, data } = useQuery(QUERY_RECIPES)
+  
   let recipes = data?.recipes
   const [newRecipes, setNewRecipes] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
   const [ingredients, setIngredients] = useState([])
   const [filterIngredients, setFilterIngredients] = useState([])
+  const [searchInput, setSearchInput] = useState('')
   
   const toggleFilter = () => {
     if (filterToggle) {
@@ -32,8 +35,17 @@ function SearchList() {
       }
     }
   }
-
+  
   const filterSearch = () => {
+    // Search
+    recipes = recipes.filter(function (recipe) {
+      if (searchInput === '') {
+        return recipe
+      } else if (recipe.name.toLowerCase().includes(searchInput.toLowerCase())) {
+        return recipe
+      }
+    })
+
     // Ingredients
     document.querySelectorAll("input[name=ingredient]:checked").forEach((ingredient) => {
       filterIngredients.push(ingredient.value)
@@ -79,6 +91,11 @@ function SearchList() {
 
   return (
     <>
+      <div id="searchbar">
+        <input id="search-input" type="text" onChange={(e) => setSearchInput(e.target.value)}/>
+        <button className="search-btn" onClick={filterSearch}>Search</button>
+      </div>
+      
       {loading ? (
         <div>Loading...</div>
         ) : (
@@ -97,6 +114,7 @@ function SearchList() {
                 <input type="checkbox" name="cookTime" value=">30"/>More Than 30 mins
 
                 <h5>Difficulty:</h5>
+                <p>Please Select One</p>
                 <input type="checkbox" name="difficulty" value="1"/>Easy
                 <input type="checkbox" name="difficulty" value="2"/>Medium
                 <input type="checkbox" name="difficulty" value="3"/>Hard

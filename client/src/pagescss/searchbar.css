@@ -1,12 +1,8 @@
-.search-bar-container {
-    /* Add styles for search bar container */
-  }
-  
-  input[type="recipe"] {
+input[type="recipe"] {
     width: 300px;
     padding: 10px;
   }
-  
+
   button {
     padding: 10px 20px;
     background-color: #2b3f00;
@@ -14,4 +10,3 @@
     border: none;
     cursor: pointer;
   }
-  

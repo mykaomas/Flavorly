@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from "../utils/mutations";
+import Header from "../components/header/header"
 
 import Auth from '../utils/auth'
 
@@ -32,6 +33,7 @@ const Login = (props) => {
         Auth.login(data.login.token);
       } catch (e) {
         console.error(e);
+        alert("Invalid Username or Password, Please Try Again.")
       }
   
       // clear form values
@@ -42,7 +44,9 @@ const Login = (props) => {
     };
 
     return (
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+      
+        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100"> 
+        <Header></Header>
             <div className="bg-white p-3 rounded w-25">
                 <h2><center>Login</center></h2>
                 <form onSubmit={handleSubmit}>

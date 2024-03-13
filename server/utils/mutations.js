@@ -23,19 +23,3 @@ mutation login($email: String!, $password: String!) {
   }
 }
 `
-
-export const ADD_FAVORITE = gql`
-  mutation addFavorite($userId: String!, $recipeId: String!) {
-    addFavorite(userId: $userId, recipeId: $recipeId) {
-      _id
-    }
-  } 
-`
-
-export const REMOVE_FAVORITE = gql`
-  mutation removeFavorite($userId: String!, $recipeId: String!) {
-    removeFavorite(userId: $userId, recipeId: $recipeId) {
-      _id
-    }
-  } 
-`

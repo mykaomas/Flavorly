@@ -1,14 +1,14 @@
 [
   {
-    "name": "my name",
+    "name": "david",
     "email": "lalala@email.com",
     "password": "test123",
     "expertise": "the OG",
     "bio": "im da best, duh"
   },
   {
-    "name": "my name",
-    "email": "lalala@email.com",
+    "name": "greg",
+    "email": "test@email.com",
     "password": "test123",
     "expertise": "the OG",
     "bio": "im da best, duh"

@@ -2,9 +2,9 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
+import Home from './pages/Home.jsx';
 import Signup from './pages/AccountSignup.jsx';
 import Login from './pages/Login.jsx';
-// import Profile from './pages/Vote';
 import NotFound from './pages/NotFound';
 import Profilepage from './pages/Profile'
 import SearchList from './pages/SearchList.jsx';
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
         element: <Signup />
       }, {
 
+        path: '/Signup',
+        element: <Signup />
+      }, 
+      {
         path: '/Login',
         element: <Login />
       },
@@ -29,8 +33,8 @@ const router = createBrowserRouter([
         path: '/Profile',
         element: <Profilepage />
       },
-       {
-        path: '/search',
+      {
+        path: '/Search',
         element: <SearchList />
       }, {
 
