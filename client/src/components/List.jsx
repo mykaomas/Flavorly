@@ -9,7 +9,18 @@ function List({ recipes, newRecipes }) {
 
     const handleChange = async (recipeId, e) => {
         if (!e.target.checked) {
-            console.log('false' + ' ' + recipeId)
+            
+            let token = AuthService.getUser();
+            try {
+                const { data } = await removeFavorite({
+                    variables: {
+                        userId: token.data._id,
+                        recipeId: recipeId
+                    }
+                })
+            } catch (err) {
+                console.log(err)
+            }
         } else if (e.target.checked) {
             let token = AuthService.getUser();
             try {

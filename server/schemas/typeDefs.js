@@ -36,6 +36,7 @@ const typeDefs = `
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addFavorite(userId: String!, recipeId: String!): User
+    removeFavorite(userId: String!, recipeId: String!): User
   }
 `
 
