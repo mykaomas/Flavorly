@@ -8,6 +8,7 @@ import { QUERY_RECIPES } from "../utils/queries"
 
 function SearchList() {
   const { loading, data } = useQuery(QUERY_RECIPES)
+  
   let recipes = data?.recipes
   const [newRecipes, setNewRecipes] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
