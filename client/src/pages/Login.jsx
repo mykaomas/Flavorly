@@ -49,7 +49,7 @@ const Login = (props) => {
         <div> 
         <Header></Header>
             <div className="bg-secondary vh-100 formDiv" >
-                <form className="p-3 rounded w-25" onSubmit={handleSubmit}>
+                <form className="p-3 rounded w-25 loginForm" onSubmit={handleSubmit}>
                   <h2>Please Login</h2>
                   
                     <div className="mb-3">
