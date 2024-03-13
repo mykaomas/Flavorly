@@ -19,9 +19,14 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  
-  favorites: [favoriteSchema] 
-  
+  favorites: [
+    {
+      recipeId: {
+        type: String,
+        required: true
+      }
+    }
+  ] 
 })
 
 userSchema.pre('save', async function (next) {
