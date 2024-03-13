@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from "../utils/mutations";
 import Header from "../components/header/header"
+import '../pagescss/login.css';
 
 import Auth from '../utils/auth'
 
@@ -45,15 +46,15 @@ const Login = (props) => {
 
     return (
       
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100"> 
+        <div> 
         <Header></Header>
-            <div className="bg-white p-3 rounded w-25">
-                <h2><center>Login</center></h2>
-                <form onSubmit={handleSubmit}>
-                    
+            <div className="bg-secondary vh-100 formDiv" >
+                <form className="p-3 rounded w-25" onSubmit={handleSubmit}>
+                  <h2>Please Login</h2>
+                  
                     <div className="mb-3">
                         <label htmlFor="email">
-                            <strong>Email</strong>
+                            <strong>Email:</strong>
                         </label>
                         <input 
                         type="text" 
@@ -68,7 +69,7 @@ const Login = (props) => {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email">
-                            <strong>Password</strong>
+                            <strong>Password:</strong>
                         </label>
                         <input type="password" 
                         placeholder='Enter Password' 

@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth'
 import Header from "../components/header/header"
+import '../pagescss/signup.css';
 
 const Signup = () => {
     const [userState, setUserState] = useState({
@@ -42,19 +43,16 @@ const Signup = () => {
       }
     };
 
-
-    <header></header>
     return (
     
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+        <div className>
           <Header></Header>
-            <div className="bg-white p-3 rounded w-25">
-            <h2><center>Sign Up</center></h2>
-
-                <form onSubmit={handleSubmit}>
+            <div className="bg-secondary vh-100 rounded-0 signupDiv">
+                <form className="p-3 rounded w-25 signupForm" onSubmit={handleSubmit}>
+                <h2 classname="h2Signup">Sign Up</h2>
                     <div className="mb-3">
                         <label htmlFor="email">
-                            <strong>Name</strong>
+                            <strong>Name:</strong>
                         </label>
                         <input 
                         type="text" 
@@ -68,7 +66,7 @@ const Signup = () => {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email">
-                            <strong>Email</strong>
+                            <strong>Email:</strong>
                         </label>
                         <input 
                         type="text" 
@@ -83,7 +81,7 @@ const Signup = () => {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email">
-                            <strong>Password</strong>
+                            <strong>Password:</strong>
                         </label>
                         <input 
                         type="password" 
