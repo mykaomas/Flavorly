@@ -48,7 +48,7 @@ const Signup = () => {
         <div className>
           <Header></Header>
             <div className="bg-secondary vh-100 rounded-0 signupDiv">
-                <form className="p-3 rounded w-25 signupForm" onSubmit={handleSubmit}>
+                <form className="p-3 rounded w-25 signupForm signupForm" onSubmit={handleSubmit}>
                 <h2 classname="h2Signup">Sign Up</h2>
                     <div className="mb-3">
                         <label htmlFor="email">
