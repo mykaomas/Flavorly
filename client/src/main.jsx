@@ -7,7 +7,6 @@ import Signup from './pages/AccountSignup.jsx';
 import Login from './pages/Login.jsx';
 import NotFound from './pages/NotFound';
 import Profilepage from './pages/Profile'
-import SearchList from './pages/SearchList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,10 +29,6 @@ const router = createBrowserRouter([
       {
         path: '/Profile',
         element: <Profilepage />
-      },
-      {
-        path: '/search',
-        element: <SearchList />
       }
     ],
   },
