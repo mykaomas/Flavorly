@@ -31,3 +31,11 @@ export const ADD_FAVORITE = gql`
     }
   } 
 `
+
+export const REMOVE_FAVORITE = gql`
+  mutation removeFavorite($userId: String!, $recipeId: String!) {
+    removeFavorite(userId: $userId, recipeId: $recipeId) {
+      _id
+    }
+  } 
+`

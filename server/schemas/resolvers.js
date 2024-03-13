@@ -42,7 +42,14 @@ const resolvers = {
         { $addToSet: { favorites: { recipeId } } },
         { new: true }
       )
-    }
+    },
+    removeFavorite: async (parent, { userId, recipeId }) => {
+      return await User.findOneAndUpdate(
+        { _id: userId },
+        { $pull: { favorites: { recipeId: recipeId } } },
+        { new: true }
+      )
+    },
   }
 }
 

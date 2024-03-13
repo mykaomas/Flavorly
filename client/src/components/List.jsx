@@ -1,19 +1,38 @@
 import * as React from 'react';
 import  AuthService  from '../utils/auth';
 import { useMutation } from '@apollo/client'
+import { ADD_FAVORITE, REMOVE_FAVORITE } from '../utils/mutations'
 
 function List({ recipes, newRecipes }) {
-    const [checked, setChecked] = React.useState(false);
+    const [addFavorite, { error }] = useMutation(ADD_FAVORITE)
+    const [removeFavorite, { err }] = useMutation(REMOVE_FAVORITE)
 
-    const handleChange = (recipeId, e) => {
-        setChecked(!e.target.checked);
-        if (!e.target.checked){
-            console.log('false' + ' ' + recipeId)
-        }
-        
-        if (e.target.checked){
+    const handleChange = async (recipeId, e) => {
+        if (!e.target.checked) {
+            
             let token = AuthService.getUser();
-            console.log('userid:' + token.data._id + ' ' + 'recipeid: ' + recipeId);
+            try {
+                const { data } = await removeFavorite({
+                    variables: {
+                        userId: token.data._id,
+                        recipeId: recipeId
+                    }
+                })
+            } catch (err) {
+                console.log(err)
+            }
+        } else if (e.target.checked) {
+            let token = AuthService.getUser();
+            try {
+                const { data } = await addFavorite({
+                    variables: {
+                        userId: token.data._id,
+                        recipeId: recipeId
+                    }
+                })
+            } catch (err) {
+                console.log(err)
+            }
         }
     }
 
