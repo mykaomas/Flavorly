@@ -8,7 +8,7 @@ const typeDefs = `
   }
 
   type Favorites {
-    recipeId: String!
+    recipe: [Recipe]!
   }
 
   type Recipe {
@@ -29,6 +29,7 @@ const typeDefs = `
     users: [User]
     recipes: [Recipe]
     filteredRecipes: [Recipe]
+    favoriteRecipes(userId: ID!): User
   }
 
   type Mutation {

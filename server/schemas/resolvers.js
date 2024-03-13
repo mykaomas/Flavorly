@@ -4,11 +4,14 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find({})
+      return User.find()
     },
     recipes: async () => {
       return Recipe.find();
     },
+    favoriteRecipes: async (parent, {userId}) => {
+      return User.findOne({ _id: userId }).populate('favorites')
+    }
   },
   Mutation: {
     createRecipe: async (parent, args) => {
