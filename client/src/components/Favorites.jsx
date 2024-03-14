@@ -1,6 +1,7 @@
-const Favorites = ({ recipes }) => {
-    console.log(recipes)
-
+const Favorites = ({ recipes, newRecipes }) => {
+    if (newRecipes.length > 0) {
+        recipes = newRecipes
+    }
     return (
         <div>
             {recipes ? (

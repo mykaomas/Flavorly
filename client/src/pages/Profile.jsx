@@ -12,6 +12,8 @@ const Profilepage = () => {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [searchInput, setSearchInput] = useState('')
+  const [newRecipes, setNewRecipes] = useState([])
 
   let recipes
   const token = AuthService.getUser()
@@ -46,7 +48,7 @@ const Profilepage = () => {
         return recipe
       }
     })
-    console.log(recipes)
+    setNewRecipes(recipes)
   }
 
   return (
@@ -61,7 +63,7 @@ const Profilepage = () => {
           {loading ? (
               <div>Loading...</div>
             ) : (
-              <Favorites recipes={recipes} />
+              <Favorites recipes={recipes} newRecipes={newRecipes}/>
           )}
         </div>
         <div className="profilecontainer">
