@@ -66,7 +66,7 @@ This application uses the [MIT LICENSE](./LICENSE), please refer to the link for
 ## Credits
 Flavorly was developed by a team of passionate developers dedicated to creating a user-friendly platform for food enthusiasts. The application's frontend and backend were built with careful attention to detail, ensuring a smooth and enjoyable user experience.
 
-Please reach out to any of us for questions or comments about Flavorly.
+Please reach out to any of us for questions or comments about Flavorly. <br />
 [Cody Stepp](https://github.com/codystepp1006) <br />
 [DBrush](https://github.com/coldnebraska) <br />
 [gyerkes](https://github.com/gyerkes) <br />
