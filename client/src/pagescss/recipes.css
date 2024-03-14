@@ -25,11 +25,12 @@ body {
     border-radius: 5px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-left: 1rem;
     transition: all .2s ease-out;
 }
 
-.search-btn:hover, .filter-btn:hover {
+.search-btn:hover, 
+.filter-btn:hover, 
+.results-btn:hover {
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -66,4 +67,38 @@ body {
     font-size: 1rem;
     font-weight: bold;
     padding: 10px;
+}
+
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ingredient {
+    max-width: 20%;
+}
+
+.filter {
+    margin: 0 1rem;
+}
+
+.filter h5 {
+    margin-top: 2rem;
+    border-bottom: solid black 1px;
+}
+
+.filter span {
+    margin-right: 1rem;
+}
+
+.results-btn {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+    transition: all .2s ease-out;
 }
