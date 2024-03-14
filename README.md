@@ -4,13 +4,13 @@
 The Flavorly application is a platform designed to help users discover and explore a vast collection of recipes from various cuisines and difficulty levels. Whether you're a seasoned chef looking for new culinary challenges or a novice cook searching for simple and delicious recipes, Flavorly has something for everyone.
 
 ## Table of Contents
-[Images](#images)  
-[Features](#features)
-[Technologies](#technologies)
-[Installation](#setup-instructions)  
-[Usage](#usage) 
-[Code Overview](#code-overview)  
-[License](#license)  
+[Images](#images)  <br />
+[Features](#features) <br />
+[Technologies](#technologies) <br />
+[Installation](#setup-instructions)  <br />
+[Usage](#usage) <br />
+[Code Overview](#code-overview)  <br />
+[License](#license)  <br />
 [Credits](#credits) 
 
 ## Images
@@ -67,9 +67,9 @@ This application uses the [MIT LICENSE](./LICENSE), please refer to the link for
 Flavorly was developed by a team of passionate developers dedicated to creating a user-friendly platform for food enthusiasts. The application's frontend and backend were built with careful attention to detail, ensuring a smooth and enjoyable user experience.
 
 Please reach out to any of us for questions or comments about Flavorly.
-[Cody Stepp](https://github.com/codystepp1006)
-[DBrush](https://github.com/coldnebraska)
-[gyerkes](https://github.com/gyerkes)
-[Mykaomas](https://github.com/mykaomas)
-[YvetteCarbajal](https://github.com/YvetteCarbajal)
+[Cody Stepp](https://github.com/codystepp1006) <br />
+[DBrush](https://github.com/coldnebraska) <br />
+[gyerkes](https://github.com/gyerkes) <br />
+[Mykaomas](https://github.com/mykaomas) <br />
+[YvetteCarbajal](https://github.com/YvetteCarbajal) <br />
 
