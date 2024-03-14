@@ -7,6 +7,8 @@ import Signup from './pages/AccountSignup.jsx';
 import Login from './pages/Login.jsx';
 import NotFound from './pages/NotFound';
 import Profilepage from './pages/Profile'
+import SearchList from './pages/SearchList.jsx';
+import Homepage from './pages/Homepage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        path: '/Signup',
+        element: <Signup />
       }, {
 
         path: '/Signup',
@@ -29,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: '/Profile',
         element: <Profilepage />
+      },
+      {
+        path: '/Search',
+        element: <SearchList />
+      }, {
+
+        path: '/Homepage',
+        element: <Homepage />
       }
     ],
   },
