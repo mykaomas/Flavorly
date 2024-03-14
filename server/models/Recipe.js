@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose')
-const reviewSchema = require('./Review')
 
 const recipeSchema = new Schema({
   name: {
@@ -24,10 +23,9 @@ const recipeSchema = new Schema({
   },
   rating: {
     type: Number
-  },
-  reviews: [reviewSchema]
+  }
 })
 
 const Recipe = model('Recipe', recipeSchema)
 
-module.exports = Recipe
+module.exports = { Recipe, recipeSchema }

@@ -9,6 +9,9 @@ const resolvers = {
     recipes: async () => {
       return Recipe.find();
     },
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId })
+    }
   },
   Mutation: {
     createRecipe: async (parent, args) => {

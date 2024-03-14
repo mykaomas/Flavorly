@@ -4,18 +4,14 @@ const typeDefs = `
     name: String
     email: String
     password: String!
-    favorites: [Favorites]
-  }
-
-  type Favorites {
-    recipeId: String!
+    favorites: [Recipe]
   }
 
   type Recipe {
     _id: ID!
-    name: String!
-    ingredients: String!
-    cook_time: Int!
+    name: String
+    ingredients: String
+    cook_time: Int
     rating: Int
     difficulty: Int
   }
@@ -27,6 +23,7 @@ const typeDefs = `
 
   type Query {
     users: [User]
+    user(userId: ID!): User
     recipes: [Recipe]
     filteredRecipes: [Recipe]
   }
