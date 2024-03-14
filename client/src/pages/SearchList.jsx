@@ -7,14 +7,14 @@ import { useQuery } from "@apollo/client"
 import { QUERY_RECIPES } from "../utils/queries"
 
 function SearchList() {
-  const { loading, data } = useQuery(QUERY_RECIPES)
-  
-  let recipes = data?.recipes
   const [newRecipes, setNewRecipes] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
   const [ingredients, setIngredients] = useState([])
   const [filterIngredients, setFilterIngredients] = useState([])
   const [searchInput, setSearchInput] = useState('')
+  
+  const { loading, data } = useQuery(QUERY_RECIPES)
+  let recipes
   
   const toggleFilter = () => {
     if (filterToggle) {
@@ -25,6 +25,8 @@ function SearchList() {
   }
   
   if (!loading) {
+    recipes = data?.recipes
+
     for (let i = 0; i < recipes.length; i++) {
       const recipeIngredients = recipes[i].ingredients.split(' ')
       for (let i = 0; i < recipeIngredients.length; i++) {
