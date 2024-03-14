@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/flavorly')
+mongoose.connect('mongodb+srv://brushdavid99:NlIaqBCvrTtyro2T@flavorly.rxyyxhm.mongodb.net/?retryWrites=true&w=majority&appName=Flavorly')
 
 module.exports = mongoose.connection
