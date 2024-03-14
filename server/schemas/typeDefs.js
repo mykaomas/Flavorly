@@ -8,7 +8,7 @@ const typeDefs = `
   }
 
   type Favorites {
-    recipe: [Recipe]!
+    recipe: [Recipe]
   }
 
   type Recipe {

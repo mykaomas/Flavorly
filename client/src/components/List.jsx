@@ -9,7 +9,6 @@ function List({ recipes, newRecipes }) {
 
     const handleChange = async (recipeId, e) => {
         if (!e.target.checked) {
-            
             let token = AuthService.getUser();
             try {
                 const { data } = await removeFavorite({
@@ -42,7 +41,10 @@ function List({ recipes, newRecipes }) {
     
     return (
         <div className="search-list">
-            {recipes.map((recipe, index) => {
+            {!recipes ? (
+                <p>No Favorites Found</p>
+            ) : (
+            recipes.map((recipe, index) => {
                 let rating = ""
                 for (let i = 0; i < recipe.rating; i++) {
                     rating += "⭐"
@@ -57,7 +59,8 @@ function List({ recipes, newRecipes }) {
                         <p>Ingredients: {recipe.ingredients}</p>
                     </div>
                 </div>
-            )})}
+            )})
+            )}
         </div>
     )
 }

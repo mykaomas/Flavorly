@@ -1,8 +1,9 @@
 import List from '../components/List'
 import AuthService from '../utils/auth'
-import React, { useState } from 'react';
 import { useQuery } from "@apollo/client"
 import { QUERY_RECIPES, QUERY_FAVORITE_RECIPES } from "../utils/queries"
+
+import React, { useState } from 'react';
 import Header from '../components/header/header';
 import '../components/header/css/Header.css';
 import '../pagescss/profile.css';
@@ -12,21 +13,27 @@ const Profilepage = () => {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+
   const [searchInput, setSearchInput] = useState('')
-  const [newRecipes, setNewRecipes] = useState([])
+
+  // var { loading, data } = useQuery(QUERY_RECIPES)
+  let recipes
   
   const token = AuthService.getUser()
-  var { loading, data } = useQuery(QUERY_FAVORITE_RECIPES, {
+  let { loading, data } = useQuery(QUERY_FAVORITE_RECIPES, {
     variables: {userId: token.data._id}
   })
+
   let favorites = data?.favoriteRecipes.favorites
-  var { loading, data } = useQuery(QUERY_RECIPES)
-  let recipes = data?.recipes
 
   if (!loading) {
-    favorites = favorites.filter(function (favorite) {
+    if (!favorites) {
+      recipes = []
+    } else {
+      favorites = favorites.filter(function (favorite) {
       return favorite.recipeId
     })
+  
     recipes = recipes.filter(function (recipe) {
       for ( let i = 0; i < favorites.length; i++) {
         if (recipe._id == favorites[i].recipeId) {
@@ -34,6 +41,7 @@ const Profilepage = () => {
         }
       }
     })
+  }
   }
 
   const hideBtn = () => {
@@ -72,9 +80,9 @@ const Profilepage = () => {
       <div className='profile-content'>
         <div className="saved-recipes">
           {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <List recipes={recipes} newRecipes={newRecipes} />
+              <div>Loading...</div>
+            ) : (
+              <List recipes={recipes} newRecipes={newRecipes} />
           )}
         </div>
         <div className="profilecontainer">
