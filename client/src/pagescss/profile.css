@@ -1,0 +1,36 @@
+#searchbar {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container1 {
+    width:500px;
+    margin-left:10%;
+    margin-top:10%;
+    height:fit-content;
+    display:flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.savedRecipie{
+    background-color: lightgrey;
+    width:200px;
+    height:150px;
+    border:solid;
+    transition: all .3s ease-out;
+}
+.savedRecipie:hover{
+    transform: translateY(-10%);
+}
+.profilecontainer{
+    position: absolute;
+    top: 300px;
+    right: 300px;
+    width:200px;
+    background-color: lightgrey;
+    text-align: center;
+
+}

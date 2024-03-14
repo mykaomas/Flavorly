@@ -1,0 +1,16 @@
+[
+  {
+    "name": "david",
+    "email": "lalala@email.com",
+    "password": "test123",
+    "expertise": "the OG",
+    "bio": "im da best, duh"
+  },
+  {
+    "name": "greg",
+    "email": "test@email.com",
+    "password": "test123",
+    "expertise": "the OG",
+    "bio": "im da best, duh"
+  }
+]

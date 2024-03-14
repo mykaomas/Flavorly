@@ -1,0 +1,54 @@
+#header {
+    background-color: #dcc1ae;
+    font-family: "cursive";
+    border-bottom: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+#headerImage {
+    height: 73px;
+    border-radius: 50%;
+    transition: all .5s ease-out;
+}
+
+.animation:hover {
+    animation: spin 2s linear forwards infinite;
+}
+
+#header-title {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#logout-btn, #login-btn, #signup-btn, #profile-btn {
+    padding-right: 2rem;
+    color:black;
+    font-size: larger;
+    transition: all .3s ease-out;
+}
+
+#logoutbtn:hover, #profilebtn:hover {
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    25% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+    50% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    75% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+    100% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
