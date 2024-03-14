@@ -4,33 +4,28 @@
     margin-top: 50px;
 }
 
-.container1 {
-    width:500px;
-    margin-left:10%;
-    margin-top:10%;
-    height:fit-content;
-    display:flex;
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.saved-recipes {
+    display: flex;
     gap: 50px;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.savedRecipie{
-    background-color: lightgrey;
-    width:200px;
-    height:150px;
-    border:solid;
-    transition: all .3s ease-out;
+
+.savedRecipe {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 150px;
+    border: solid;
 }
-.savedRecipie:hover{
-    transform: translateY(-10%);
-}
-.profilecontainer{
-    position: absolute;
-    top: 300px;
-    right: 300px;
-    width:200px;
-    background-color: lightgrey;
+
+.profilecontainer {
+    width: 30%;
     text-align: center;
 
 }

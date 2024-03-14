@@ -7,14 +7,14 @@ import { useQuery } from "@apollo/client"
 import { QUERY_RECIPES } from "../utils/queries"
 
 function SearchList() {
-  const { loading, data } = useQuery(QUERY_RECIPES)
-  
-  let recipes = data?.recipes
   const [newRecipes, setNewRecipes] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
   const [ingredients, setIngredients] = useState([])
   const [filterIngredients, setFilterIngredients] = useState([])
   const [searchInput, setSearchInput] = useState('')
+  
+  const { loading, data } = useQuery(QUERY_RECIPES)
+  let recipes
   
   const toggleFilter = () => {
     if (filterToggle) {
@@ -25,6 +25,8 @@ function SearchList() {
   }
   
   if (!loading) {
+    recipes = data?.recipes
+
     for (let i = 0; i < recipes.length; i++) {
       const recipeIngredients = recipes[i].ingredients.split(' ')
       for (let i = 0; i < recipeIngredients.length; i++) {
@@ -37,6 +39,7 @@ function SearchList() {
   }
   
   const filterSearch = () => {
+    setFilterToggle(false)
     // Search
     recipes = recipes.filter(function (recipe) {
       if (searchInput === '') {
@@ -99,35 +102,39 @@ function SearchList() {
       {loading ? (
         <div>Loading...</div>
         ) : (
-          <div>
+          <div className="filter">
             <button className="filter-btn" onClick={toggleFilter}>Filter</button>
             {filterToggle ? (
               <div>
                 <h5>Ingredients:</h5>
-                <Ingredients ingredients={ingredients}/>
+                <div className="ingredient-list">
+                  <Ingredients ingredients={ingredients}/>
+                </div>
 
                 <h5>Cook Time: </h5>
                 <p>Please Select One</p>
-                <input type="checkbox" name="cookTime" value="10"/>Less Than 10 mins
-                <input type="checkbox" name="cookTime" value="20"/>Less Than 20 mins
-                <input type="checkbox" name="cookTime" value="30"/>Less Than 30 mins
-                <input type="checkbox" name="cookTime" value=">30"/>More Than 30 mins
+                <input type="checkbox" name="cookTime" value="10"/><span>Less Than 10 mins</span>
+                <input type="checkbox" name="cookTime" value="20"/><span>Less Than 20 mins</span>
+                <input type="checkbox" name="cookTime" value="30"/><span>Less Than 30 mins</span>
+                <input type="checkbox" name="cookTime" value=">30"/><span>More Than 30 mins</span>
 
                 <h5>Difficulty:</h5>
                 <p>Please Select One</p>
-                <input type="checkbox" name="difficulty" value="1"/>Easy
-                <input type="checkbox" name="difficulty" value="2"/>Medium
-                <input type="checkbox" name="difficulty" value="3"/>Hard
+                <input type="checkbox" name="difficulty" value="1"/><span>Easy</span>
+                <input type="checkbox" name="difficulty" value="2"/><span>Medium</span>
+                <input type="checkbox" name="difficulty" value="3"/><span>Hard</span>
 
                 <h5>Rating:</h5>
                 <p>Please Select One</p>
-                <input type="checkbox" name="rating" value={1}/>⭐
-                <input type="checkbox" name="rating" value={2}/>⭐⭐
-                <input type="checkbox" name="rating" value={3}/>⭐⭐⭐
-                <input type="checkbox" name="rating" value={4}/>⭐⭐⭐⭐
-                <input type="checkbox" name="rating" value={5}/>⭐⭐⭐⭐⭐
+                <input type="checkbox" name="rating" value={1}/><span>⭐</span>
+                <input type="checkbox" name="rating" value={2}/><span>⭐⭐</span>
+                <input type="checkbox" name="rating" value={3}/><span>⭐⭐⭐</span>
+                <input type="checkbox" name="rating" value={4}/><span>⭐⭐⭐⭐</span>
+                <input type="checkbox" name="rating" value={5}/><span>⭐⭐⭐⭐⭐</span>
 
-                <button onClick={filterSearch}>See Results</button>
+                <div>
+                  <button className="results-btn" onClick={filterSearch}>See Results</button>
+                </div>
               </div>
             ) : (
               <></>

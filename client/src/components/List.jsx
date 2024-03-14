@@ -9,25 +9,40 @@ function List({ recipes, newRecipes }) {
 
     const handleChange = async (recipeId, e) => {
         if (!e.target.checked) {
-            
+            let singleRecipe
+            for (let i = 0; i < recipes.length; i++) {
+                if (recipes[i]._id == recipeId) {
+                    singleRecipe = recipes[i]
+                }
+            }
             let token = AuthService.getUser();
             try {
                 const { data } = await removeFavorite({
                     variables: {
                         userId: token.data._id,
-                        recipeId: recipeId
+                        recipeName: singleRecipe.name
                     }
                 })
             } catch (err) {
                 console.log(err)
             }
         } else if (e.target.checked) {
+            let singleRecipe
+            for (let i = 0; i < recipes.length; i++) {
+                if (recipes[i]._id == recipeId) {
+                    singleRecipe = recipes[i]
+                }
+            }
             let token = AuthService.getUser();
             try {
                 const { data } = await addFavorite({
                     variables: {
                         userId: token.data._id,
-                        recipeId: recipeId
+                        name: singleRecipe.name,
+                        cookTime: singleRecipe.cook_time,
+                        difficulty: singleRecipe.difficulty,
+                        ingredients: singleRecipe.ingredients,
+                        rating: singleRecipe.rating,
                     }
                 })
             } catch (err) {
