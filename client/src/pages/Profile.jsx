@@ -20,11 +20,7 @@ const Profilepage = () => {
   })
 
   if(!loading) {
-    recipes = data?.user.favorites[0]
-    console.log(recipes)
-    if (!recipes.name) {
-      recipes = false
-    }
+    recipes = data?.user.favorites
   }
 
   const hideBtn = () => {
