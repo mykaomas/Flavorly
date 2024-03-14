@@ -1,4 +1,5 @@
 # Flavorly [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+Taste the world, one recipe at a time
 
 ## Description
 The Flavorly application is a platform designed to help users discover and explore a vast collection of recipes from various cuisines and difficulty levels. Whether you're a seasoned chef looking for new culinary challenges or a novice cook searching for simple and delicious recipes, Flavorly has something for everyone.
