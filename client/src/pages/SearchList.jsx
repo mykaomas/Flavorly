@@ -39,6 +39,7 @@ function SearchList() {
   }
   
   const filterSearch = () => {
+    setFilterToggle(false)
     // Search
     recipes = recipes.filter(function (recipe) {
       if (searchInput === '') {
