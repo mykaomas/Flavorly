@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "engines": {
     "node": "20.x"
-  }
+  },
   "scripts": {
     "start": "node server/server.js --ignore client",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
