@@ -32,8 +32,8 @@ const typeDefs = `
     createRecipe(ingredients: String!, cook_time: String!): Recipe
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addFavorite(userId: String!, recipeId: String!): User
-    removeFavorite(userId: String!, recipeId: String!): User
+    addFavorite(userId: String!, name: String!, cook_time: Int!, difficulty: Int!, ingredients: String!, rating: Int!): User
+    removeFavorite(userId: String!, recipeName: String!): User
   }
 `
 
