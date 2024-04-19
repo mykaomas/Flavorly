@@ -19,6 +19,9 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
+  profilePic: {
+    type: String
+  },
   favorites: [favoriteSchema] 
 })
 

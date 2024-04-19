@@ -5,6 +5,7 @@ const typeDefs = `
     email: String
     password: String!
     favorites: [Favorites]
+    profilePic: String
   }
 
   type Favorites {
@@ -27,6 +28,7 @@ const typeDefs = `
 
   type Query {
     users: [User]
+    user(email: String): User
     recipes: [Recipe]
     filteredRecipes: [Recipe]
   }
