@@ -85,10 +85,12 @@ body {
 .filter-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: #c3ac9b;
     border-top: #72665c solid 1px;
     border-bottom: #72665c solid 1px;
     margin: 1rem 0;
+    padding: 1rem 0;
 }
 
 .filter-container > div, h5 {
