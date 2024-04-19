@@ -108,26 +108,26 @@ function SearchList() {
 
                 <h5>Cook Time: </h5>
                 <select>
-                  <option>Less than 10 mins</option>
-                  <option>Less than 20 mins</option>
-                  <option>Less than 30 mins</option>
-                  <option>More than 30 mins</option>
+                  <option name='cookTime' value='10'>Less than 10 mins</option>
+                  <option name='cookTime' value='20'>Less than 20 mins</option>
+                  <option name='cookTime' value='30'>Less than 30 mins</option>
+                  <option name='cookTime' value='40'>More than 30 mins</option>
                 </select>
 
                 <h5>Difficulty:</h5>
                 <select>
-                  <option>Easy</option>
-                  <option>Medium</option>
-                  <option>Hard</option>
+                  <option name='difficulty' value='1'>Easy</option>
+                  <option name='difficulty' value='2'>Medium</option>
+                  <option name='difficulty' value='3'>Hard</option>
                 </select>
 
                 <h5>Rating:</h5>
                 <select>
-                  <option>⭐</option>
-                  <option>⭐⭐</option>
-                  <option>⭐⭐⭐</option>
-                  <option>⭐⭐⭐⭐</option>
-                  <option selected= "selected">⭐⭐⭐⭐⭐</option>
+                  <option name='rating' value={1}>⭐</option>
+                  <option name='rating' value={2}>⭐⭐</option>
+                  <option name='rating' value={3}>⭐⭐⭐</option>
+                  <option name='rating' value={4}>⭐⭐⭐⭐</option>
+                  <option name='rating' value={5} selected= "selected">⭐⭐⭐⭐⭐</option>
                 </select>
 
                 <button onClick={filterSearch}>See Results</button>
