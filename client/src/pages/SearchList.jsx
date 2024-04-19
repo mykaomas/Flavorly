@@ -55,31 +55,18 @@ function SearchList() {
     recipes = recipes.filter((recipe) => filterIngredients.every(function (i) {return recipe.ingredients.includes(i)}))
 
     // Cook Time
-    const cookTime = document.querySelectorAll("input[name=cookTime]:checked")
-
-    if (cookTime.length > 1) {
-      alert("Please select only one cook time")
-    } else if (cookTime.length === 1) {
-      recipes = recipes.filter(function (recipe) {return recipe.cook_time <= cookTime[0].value})
-    }
+    const cookTime = document.querySelector("select[name=cookTime]").value
+    recipes = recipes.filter(function (recipe) {return recipe.cook_time <= cookTime})
     
     // Difficulty
-    const difficulty = document.querySelectorAll("input[name=difficulty]:checked")
-    if (difficulty.length > 1) {
-      alert("Please select only one difficulty")
-    } else if (difficulty.length === 1) {
-      recipes = recipes.filter(function (recipe) {return recipe.difficulty <= difficulty[0].value})
-    }
+    const difficulty = document.querySelector("select[name=difficulty]").value
+    recipes = recipes.filter(function (recipe) {return recipe.difficulty <= difficulty})
     
     // Rating
-    const rating = document.querySelectorAll("input[name=rating]:checked")
+    const rating = document.querySelector("select[name=rating]").value
+    recipes = recipes.filter(function (recipe) {return recipe.rating >= rating})
     
-    if (rating.length > 1) {
-      alert("Please select only one rating")
-    } else if (rating.length === 1) {
-      recipes = recipes.filter(function (recipe) {return recipe.rating >= rating[0].value})
-    }
-    
+    console.log(cookTime, difficulty, rating)
     setNewRecipes(recipes)
 
     if (recipes.length === 0) {
@@ -107,27 +94,27 @@ function SearchList() {
                 <Ingredients ingredients={ingredients}/>
 
                 <h5>Cook Time: </h5>
-                <select>
-                  <option name='cookTime' value='10'>Less than 10 mins</option>
-                  <option name='cookTime' value='20'>Less than 20 mins</option>
-                  <option name='cookTime' value='30'>Less than 30 mins</option>
-                  <option name='cookTime' value='>30'>More than 30 mins</option>
+                <select name="cookTime">
+                  <option value='10'>Less than 10 mins</option>
+                  <option value='20'>Less than 20 mins</option>
+                  <option value='30'>Less than 30 mins</option>
+                  <option value='>30'>More than 30 mins</option>
                 </select>
 
                 <h5>Difficulty:</h5>
-                <select>
-                  <option name='difficulty' value='1'>Easy</option>
-                  <option name='difficulty' value='2'>Medium</option>
-                  <option name='difficulty' value='3'>Hard</option>
+                <select name='difficulty'>
+                  <option value='1'>Easy</option>
+                  <option value='2'>Medium</option>
+                  <option value='3'>Hard</option>
                 </select>
 
                 <h5>Rating:</h5>
-                <select>
-                  <option name='rating' value={1}>⭐</option>
-                  <option name='rating' value={2}>⭐⭐</option>
-                  <option name='rating' value={3}>⭐⭐⭐</option>
-                  <option name='rating' value={4}>⭐⭐⭐⭐</option>
-                  <option name='rating' value={5} selected= "selected">⭐⭐⭐⭐⭐</option>
+                <select name='rating' defaultValue={5}>
+                  <option value={1}>⭐</option>
+                  <option value={2}>⭐⭐</option>
+                  <option value={3}>⭐⭐⭐</option>
+                  <option value={4}>⭐⭐⭐⭐</option>
+                  <option value={5}>⭐⭐⭐⭐⭐</option>
                 </select>
 
                 <button onClick={filterSearch}>See Results</button>
