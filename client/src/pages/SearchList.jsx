@@ -102,30 +102,33 @@ function SearchList() {
           <div>
             <button className="filter-btn" onClick={toggleFilter}>Filter</button>
             {filterToggle ? (
-              <div>
+              <div className="filter-container">
                 <h5>Ingredients:</h5>
                 <Ingredients ingredients={ingredients}/>
 
                 <h5>Cook Time: </h5>
-                <p>Please Select One</p>
-                <input type="checkbox" name="cookTime" value="10"/>Less Than 10 mins
-                <input type="checkbox" name="cookTime" value="20"/>Less Than 20 mins
-                <input type="checkbox" name="cookTime" value="30"/>Less Than 30 mins
-                <input type="checkbox" name="cookTime" value=">30"/>More Than 30 mins
+                <select>
+                  <option>Less than 10 mins</option>
+                  <option>Less than 20 mins</option>
+                  <option>Less than 30 mins</option>
+                  <option>More than 30 mins</option>
+                </select>
 
                 <h5>Difficulty:</h5>
-                <p>Please Select One</p>
-                <input type="checkbox" name="difficulty" value="1"/>Easy
-                <input type="checkbox" name="difficulty" value="2"/>Medium
-                <input type="checkbox" name="difficulty" value="3"/>Hard
+                <select>
+                  <option>Easy</option>
+                  <option>Medium</option>
+                  <option>Hard</option>
+                </select>
 
                 <h5>Rating:</h5>
-                <p>Please Select One</p>
-                <input type="checkbox" name="rating" value={1}/>⭐
-                <input type="checkbox" name="rating" value={2}/>⭐⭐
-                <input type="checkbox" name="rating" value={3}/>⭐⭐⭐
-                <input type="checkbox" name="rating" value={4}/>⭐⭐⭐⭐
-                <input type="checkbox" name="rating" value={5}/>⭐⭐⭐⭐⭐
+                <select>
+                  <option>⭐</option>
+                  <option>⭐⭐</option>
+                  <option>⭐⭐⭐</option>
+                  <option>⭐⭐⭐⭐</option>
+                  <option selected= "selected">⭐⭐⭐⭐⭐</option>
+                </select>
 
                 <button onClick={filterSearch}>See Results</button>
               </div>

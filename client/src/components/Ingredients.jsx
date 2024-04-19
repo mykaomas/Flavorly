@@ -1,6 +1,6 @@
 function Ingredients({ ingredients }) {
     return (
-        <>
+        <div className="ingredient-list">
             {ingredients.map(ingredient => {
                 return (
                     <div className="ingredient" key={ingredients.indexOf(ingredient)}>
@@ -8,7 +8,7 @@ function Ingredients({ ingredients }) {
                     </div>
                 )
             })}
-        </>
+        </div>
     )
 }
 
