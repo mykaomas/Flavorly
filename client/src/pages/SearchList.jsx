@@ -111,7 +111,7 @@ function SearchList() {
                   <option name='cookTime' value='10'>Less than 10 mins</option>
                   <option name='cookTime' value='20'>Less than 20 mins</option>
                   <option name='cookTime' value='30'>Less than 30 mins</option>
-                  <option name='cookTime' value='40'>More than 30 mins</option>
+                  <option name='cookTime' value='>30'>More than 30 mins</option>
                 </select>
 
                 <h5>Difficulty:</h5>
