@@ -4,33 +4,53 @@
     margin-top: 50px;
 }
 
-.container1 {
-    width:500px;
-    margin-left:10%;
-    margin-top:10%;
-    height:fit-content;
-    display:flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+.container {
+    display: flex;
+    margin-top: 2rem;
 }
-.savedRecipie{
-    background-color: lightgrey;
-    width:200px;
-    height:150px;
-    border:solid;
-    transition: all .3s ease-out;
-}
-.savedRecipie:hover{
-    transform: translateY(-10%);
-}
-.profilecontainer{
-    position: absolute;
-    top: 300px;
-    right: 300px;
-    width:200px;
-    background-color: lightgrey;
-    text-align: center;
 
+.container > * {
+    width: 50%;
+}
+
+.favorites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.saved-recipe {
+    width: 47.5%;
+    background-color: #c3ac9b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: #ae9a8b solid 1px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #9a897c;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile p {
+    margin: 1rem 0 .5rem 0;
+}
+
+.profile-icons button {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 5px;
+    margin: 5px;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+.profile-icons button:hover {
+    background-color: #ae9a8b;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }

@@ -25,40 +25,41 @@ const Profilepage = () => {
   };
 
   return (
-    <div>
+    <>
       <Header />
       <div id="searchbar">
         <form>
-          <label>
-            <input type="text" name="name" />
-          </label>
-          <input type="submit" value="Submit" />
+          <input id='search-input' type="text" name="name" />
+          <button className='search-btn'>Search</button>
         </form>
       </div>
-      <div className="container1">
-        <div className="savedRecipie">Recipe 1</div>
-        <div className="savedRecipie">Recipe 2</div>
-        <div className="savedRecipie">Recipe 3</div>
-        <div className="savedRecipie">Recipe 4</div>
-      </div>
-      <div className="profilecontainer">
-        <h1>My Profile</h1>
-        <img id="profile-pic" className="image" src={selectedImage ? `/images/${selectedImage}` : 'https://i.ibb.co/bRLCM0m/200x200-image.gif'} alt="image holder" />
-        <label htmlFor="input-file">Update Image</label>
-        <div id="profileForm">
-          {isButtonVisible && (
-            <button id="pfpupdate" onClick={hideBtn}>Update Profile</button>
-          )}
-          {showOptions && (
-            <div>
-              <button onClick={handleOption1Click}>Panda</button>
-              <button onClick={handleOption2Click}>Dog</button>
-              <button onClick={handleOption3Click}>Cat</button>
-            </div>
-          )}
+
+      <div className='container'>
+        <div className="favorites">
+          <div className="saved-recipe">Recipe 1</div>
+          <div className="saved-recipe">Recipe 2</div>
+          <div className="saved-recipe">Recipe 3</div>
+        </div>
+
+        <div className="profile">
+          <h1>My Profile</h1>
+          <img id="profile-pic" className="image" src={selectedImage ? `/images/${selectedImage}` : 'https://i.ibb.co/bRLCM0m/200x200-image.gif'} alt="image holder" />
+          <p>Update Image</p>
+          <div id="profile-form">
+            {isButtonVisible && (
+              <button id="pfpupdate" onClick={hideBtn}>Update Profile</button>
+            )}
+            {showOptions && (
+              <div className='profile-icons'>
+                <button onClick={handleOption1Click}>Panda</button>
+                <button onClick={handleOption2Click}>Dog</button>
+                <button onClick={handleOption3Click}>Cat</button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
