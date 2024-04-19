@@ -7,16 +7,13 @@ import { useQuery } from "@apollo/client"
 import { QUERY_USER } from "../utils/queries"
 
 import Auth from '../utils/auth'
+import List from '../components/List';
 
 const Profilepage = () => {
   const email = Auth.getUser().data.email
 
-  const { loading, data } = useQuery(QUERY_USER, {
-    variables: { email }
-  })
-  if (!loading) {
-    console.log(data)
-  }
+  const { loading, data } = useQuery(QUERY_USER, { variables: { email } })
+  let favorites = data?.user.favorites
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
@@ -49,9 +46,11 @@ const Profilepage = () => {
 
       <div className='container'>
         <div className="favorites">
-          <div className="saved-recipe">Recipe 1</div>
-          <div className="saved-recipe">Recipe 2</div>
-          <div className="saved-recipe">Recipe 3</div>
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <List recipes={favorites}/>
+          )}
         </div>
 
         <div className="profile">

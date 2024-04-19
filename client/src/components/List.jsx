@@ -36,7 +36,7 @@ function List({ recipes, newRecipes }) {
         }
     }
 
-    if (newRecipes.length > 0) {
+    if (newRecipes && newRecipes.length > 0) {
         recipes = newRecipes
     }
     

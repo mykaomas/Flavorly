@@ -17,6 +17,7 @@ export const QUERY_USER = gql`
 query User($email: String) {
   user(email: $email) {
     favorites {
+      _id
       ingredients
       cook_time
       name
