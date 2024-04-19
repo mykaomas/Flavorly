@@ -9,7 +9,12 @@ const typeDefs = `
   }
 
   type Favorites {
-    recipeId: String
+    _id: ID!
+    name: String!
+    ingredients: String!
+    cook_time: Int!
+    rating: Int
+    difficulty: Int
   }
 
   type Recipe {
