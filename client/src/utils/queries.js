@@ -13,3 +13,14 @@ export const QUERY_RECIPES = gql`
   }
 `
 
+export const QUERY_USER = gql`
+query User($email: String) {
+  user(email: $email) {
+    favorites {
+      recipeId
+    }
+    profilePic
+  }
+}
+`
+

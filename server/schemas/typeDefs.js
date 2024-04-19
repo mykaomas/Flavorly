@@ -9,7 +9,7 @@ const typeDefs = `
   }
 
   type Favorites {
-    recipeId: String!
+    recipeId: String
   }
 
   type Recipe {

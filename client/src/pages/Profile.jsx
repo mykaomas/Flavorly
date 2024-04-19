@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
 import Header from '../components/header/header';
 import '../components/header/css/Header.css';
 import '../pagescss/profile.css';
 
+import { useState } from 'react';
+import { useQuery } from "@apollo/client"
+import { QUERY_USER } from "../utils/queries"
+
+import Auth from '../utils/auth'
 
 const Profilepage = () => {
+  const email = Auth.getUser().data.email
+
+  const { loading, data } = useQuery(QUERY_USER, {
+    variables: { email }
+  })
+  if (!loading) {
+    console.log(data)
+  }
+
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [showOptions, setShowOptions] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
