@@ -40,7 +40,7 @@ function List({ recipes, newRecipes, page }) {
     }
     
     return (
-        <div className="search-list">
+        <>
             {recipes.map((recipe) => {
                 let rating = ""
                 for (let i = 0; i < recipe.rating; i++) {
@@ -64,7 +64,7 @@ function List({ recipes, newRecipes, page }) {
                     </div>
                 </div>
             )})}
-        </div>
+        </>
     )
 }
 

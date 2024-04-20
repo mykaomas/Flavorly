@@ -44,12 +44,14 @@ const Profilepage = () => {
         </form>
       </div>
 
-      <div className='container'>
+      <div className='profile-container'>
         <div className="favorites">
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <List recipes={favorites} page='profile'/>
+            <div className='profile-list'>
+              <List recipes={favorites} page='profile'/>
+            </div>
           )}
         </div>
 
