@@ -49,7 +49,7 @@ const Profilepage = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <List recipes={favorites}/>
+            <List recipes={favorites} page='profile'/>
           )}
         </div>
 

@@ -122,7 +122,7 @@ function SearchList() {
             ) : (
               <></>
             )}
-            <List recipes={recipes} newRecipes={newRecipes} />
+            <List recipes={recipes} newRecipes={newRecipes} page='Home'/>
           </div>
         )}
     </>

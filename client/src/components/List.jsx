@@ -8,7 +8,7 @@ function List({ recipes, newRecipes, page }) {
     const [removeFavorite, { err }] = useMutation(REMOVE_FAVORITE)
 
     const handleChange = async (recipe) => {
-        if (!true) {
+        if (page == 'profile') {
             let token = AuthService.getUser();
             try {
                 const { data } = await removeFavorite({
@@ -20,7 +20,7 @@ function List({ recipes, newRecipes, page }) {
             } catch (err) {
                 console.log(err)
             }
-        } else if (true) {
+        } else {
             let token = AuthService.getUser();
             try {
                 const { data } = await addFavorite({
@@ -50,7 +50,11 @@ function List({ recipes, newRecipes, page }) {
                 return (
                 <div className="search-card" key={recipe._id}>
                     <h1 className="search-title">{recipe.name} 
-                        <button onClick={(e) => handleChange(recipe)}>Save</button>
+                        {page == "profile" ? (
+                            <button onClick={() => handleChange(recipe, page)}>Remove</button>
+                        ) : (
+                            <button onClick={() => handleChange(recipe, page)}>Save</button>
+                        )}
                     </h1>
                     <div className="search-content">
                         <p>Cook Time: {recipe.cook_time} mins</p>
