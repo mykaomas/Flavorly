@@ -58,10 +58,9 @@ const Profilepage = () => {
         <div className="profile">
           <h1>My Profile</h1>
           <img id="profile-pic" className="image" src={selectedImage ? `/images/${selectedImage}` : 'https://i.ibb.co/bRLCM0m/200x200-image.gif'} alt="image holder" />
-          <p>Update Image</p>
           <div id="profile-form">
             {isButtonVisible && (
-              <button id="pfpupdate" onClick={hideBtn}>Update Profile</button>
+              <button id="pfpupdate" onClick={hideBtn}>Update Picture</button>
             )}
             {showOptions && (
               <div className='profile-icons'>

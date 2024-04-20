@@ -9,6 +9,7 @@ body {
 
 .search-btn,
 .search-title button {
+    max-height: 40px;
     border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .5rem 1rem;
