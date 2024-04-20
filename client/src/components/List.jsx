@@ -3,31 +3,30 @@ import  AuthService  from '../utils/auth';
 import { useMutation } from '@apollo/client'
 import { ADD_FAVORITE, REMOVE_FAVORITE } from '../utils/mutations'
 
-function List({ recipes, newRecipes }) {
+function List({ recipes, newRecipes, page }) {
     const [addFavorite, { error }] = useMutation(ADD_FAVORITE)
     const [removeFavorite, { err }] = useMutation(REMOVE_FAVORITE)
 
-    const handleChange = async (recipeId, e) => {
-        if (!e.target.checked) {
-            
+    const handleChange = async (recipe) => {
+        if (!true) {
             let token = AuthService.getUser();
             try {
                 const { data } = await removeFavorite({
                     variables: {
                         userId: token.data._id,
-                        recipeId: recipeId
+                        recipeId: recipe._id
                     }
                 })
             } catch (err) {
                 console.log(err)
             }
-        } else if (e.target.checked) {
+        } else if (true) {
             let token = AuthService.getUser();
             try {
                 const { data } = await addFavorite({
                     variables: {
                         userId: token.data._id,
-                        recipeId: recipeId
+                        ...recipe
                     }
                 })
             } catch (err) {
@@ -42,7 +41,7 @@ function List({ recipes, newRecipes }) {
     
     return (
         <div className="search-list">
-            {recipes.map((recipe, index) => {
+            {recipes.map((recipe) => {
                 let rating = ""
                 for (let i = 0; i < recipe.rating; i++) {
                     rating += "⭐"
@@ -50,7 +49,9 @@ function List({ recipes, newRecipes }) {
                 
                 return (
                 <div className="search-card" key={recipe._id}>
-                    <h1 className="search-title">{recipe.name} <input key={recipe._id} value={index} type="checkbox" onChange={(e) => handleChange(recipe._id, e)}/></h1>
+                    <h1 className="search-title">{recipe.name} 
+                        <button onClick={(e) => handleChange(recipe)}>Save</button>
+                    </h1>
                     <div className="search-content">
                         <p>Cook Time: {recipe.cook_time} mins</p>
                         <p>Rating: {rating}</p>

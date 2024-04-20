@@ -19,7 +19,7 @@ const favoriteSchema = new Schema({
     required: true
   },
   difficulty: {
-    type: String,
+    type: Number,
     required: true
   },
   rating: {

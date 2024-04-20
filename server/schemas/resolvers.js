@@ -39,17 +39,17 @@ const resolvers = {
       const token = signToken(user)
       return { token, user}
     },
-    addFavorite: async (parent, { userId, recipeId }) => {
+    addFavorite: async (parent, { userId, _id, cook_time, difficulty, ingredients, name, rating }) => {
       return await User.findOneAndUpdate(
         { _id: userId },
-        { $addToSet: { favorites: { recipeId } } },
+        { $addToSet: { favorites: { _id, cook_time, difficulty, ingredients, name, rating } } },
         { new: true }
       )
     },
-    removeFavorite: async (parent, { userId, recipeId }) => {
+    removeFavorite: async (parent, { userId, _id }) => {
       return await User.findOneAndUpdate(
         { _id: userId },
-        { $pull: { favorites: { recipeId: recipeId } } },
+        { $pull: { favorites: { _id } } },
         { new: true }
       )
     },
