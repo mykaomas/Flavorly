@@ -1,5 +1,4 @@
-import * as React from 'react';
-import  AuthService  from '../utils/auth';
+import  AuthService  from '../utils/auth'
 import { useMutation } from '@apollo/client'
 import { ADD_FAVORITE, REMOVE_FAVORITE } from '../utils/mutations'
 
@@ -8,8 +7,8 @@ function List({ recipes, newRecipes, page }) {
     const [removeFavorite, { err }] = useMutation(REMOVE_FAVORITE)
 
     const handleChange = async (recipe) => {
-        let token = AuthService.getUser();
-        console.log(token)
+        let token = AuthService.getUser()
+        
         if (page == 'profile') {
             try {
                 const { data } = await removeFavorite({
@@ -18,6 +17,7 @@ function List({ recipes, newRecipes, page }) {
                         recipeId: recipe._id
                     }
                 })
+                window.location.reload()
             } catch (err) {
                 console.log(err)
             }
