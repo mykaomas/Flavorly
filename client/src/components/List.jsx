@@ -8,8 +8,9 @@ function List({ recipes, newRecipes, page }) {
     const [removeFavorite, { err }] = useMutation(REMOVE_FAVORITE)
 
     const handleChange = async (recipe) => {
+        let token = AuthService.getUser();
+        console.log(token)
         if (page == 'profile') {
-            let token = AuthService.getUser();
             try {
                 const { data } = await removeFavorite({
                     variables: {
@@ -21,7 +22,6 @@ function List({ recipes, newRecipes, page }) {
                 console.log(err)
             }
         } else {
-            let token = AuthService.getUser();
             try {
                 const { data } = await addFavorite({
                     variables: {

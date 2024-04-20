@@ -33,8 +33,8 @@ export const ADD_FAVORITE = gql`
 `
 
 export const REMOVE_FAVORITE = gql`
-  mutation removeFavorite($userId: ID!, $recipeId: String!) {
-    removeFavorite(userId: $userId, recipeId: $recipeId) {
+  mutation removeFavorite($userId: ID!, $recipeId: ID!) {
+    removeFavorite(userId: $userId, _id: $recipeId) {
       _id
     }
   } 
