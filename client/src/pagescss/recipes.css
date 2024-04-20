@@ -7,7 +7,8 @@ body {
     padding: 5px;
 }
 
-.search-btn {
+.search-btn,
+.search-title button {
     border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .5rem 1rem;
@@ -29,7 +30,9 @@ body {
     transition: all .2s ease-out;
 }
 
-.search-btn:hover, .filter-btn:hover {
+.search-btn:hover,
+.search-title button:hover,
+.filter-btn:hover {
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -54,11 +57,17 @@ body {
 }
 
 .search-title {
+    display: flex;
+    justify-content: space-between;
     color: #fff;
-    font-size: 1.5rem;
     padding: 5px;
     padding-left: 10px;
     border-bottom: #dcc1ae solid 1px;
+}
+
+.search-title h1 {
+    font-size: 1.5rem;
+    width: fit-content;
 }
 
 .search-content {

@@ -49,13 +49,14 @@ function List({ recipes, newRecipes, page }) {
                 
                 return (
                 <div className="search-card" key={recipe._id}>
-                    <h1 className="search-title">{recipe.name} 
+                    <div className="search-title">
+                        <h1>{recipe.name}</h1> 
                         {page == "profile" ? (
                             <button onClick={() => handleChange(recipe, page)}>Remove</button>
                         ) : (
                             <button onClick={() => handleChange(recipe, page)}>Save</button>
                         )}
-                    </h1>
+                    </div>
                     <div className="search-content">
                         <p>Cook Time: {recipe.cook_time} mins</p>
                         <p>Rating: {rating}</p>
